@@ -13,7 +13,8 @@ def popakaka():
     date = request.args.get("date")
     hour = request.args.get("hour")
     min = request.args.get("min")
-    return render_template("index.html", perevoz=perevoz, route=route, govno=govno, cost=cost, date=date, hour=hour, min=min)
+    count = request.args.get("count")
+    return render_template("index.html", perevoz=perevoz, route=route, govno=govno, cost=cost, date=date, hour=hour, min=min, count=count)
 
 
 app.run()
