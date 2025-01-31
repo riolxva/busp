@@ -17,4 +17,5 @@ def popakaka():
     return render_template("index.html", perevoz=perevoz, route=str(route).replace("@", '"'), govno=govno, cost=cost, date=date, hour=hour, min=min, count=count)
 
 
-app.run()
+app.run(host='0.0.0.0', port=5000)
+ 
