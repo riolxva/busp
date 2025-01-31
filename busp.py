@@ -8,7 +8,7 @@ from aiogram.client.default import DefaultBotProperties
 from aiogram.enums import ParseMode
 from aiogram.filters import CommandStart
 from aiogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, WebAppInfo
-from datetime import datetime, timedelta
+from datetime import datetime, time, timedelta
 
 
 def asd(a):
@@ -18,9 +18,22 @@ def asd(a):
         return "🚎 "
     elif a.json()['basicTripInfo']['vehicleTypeName'] == "Трамвай":
         return "🚃 "
+    
+
 def rint():
     x = randint(7900000000,7999999999)
     return x 
+
+
+def task():
+    requests.post("https://buspaybot.icom24.ru/api/search/qr?botName=buspaybot&scannedCode=508216", json={"initData":"query_id=AAE0DkRoAAAAADQORGg9OzFj&user=%7B%22id%22%3A1749290548%2C%22first_name%22%3A%224s%F0%9F%A4%A7%22%2C%22last_name%22%3A%22%22%2C%22username%22%3A%22xva4s2%22%2C%22language_code%22%3A%22ru%22%2C%22is_premium%22%3Atrue%2C%22allows_write_to_pm%22%3Atrue%2C%22photo_url%22%3A%22https%3A%5C%2F%5C%2Ft.me%5C%2Fi%5C%2Fuserpic%5C%2F320%5C%2F-YLJccB6b9ek6pGSbp3w3rxjTbDtfodmS15XAqHu65c.svg%22%7D&auth_date=1733844565&signature=7on5VhQOH8o2V0dh8wnZIgVIiyvW5aM3nATKQ-3OOJxgnZpB4hw8hDH0eNCOoSUyxubVpy0kw6Kq72MFVD9VDw&hash=4744f6bb621839f00783969f312b38a9afb6410b4a9f24c9f4c9caaa242eaba4"})  
+
+
+while True:
+    task()
+    time.sleep(600)  
+
+
 
 white = [ 1749290548, 706686986, 1820132315, 1389182288, 752618557, 1816422993, 1240163871 ] 
             #я          саша       марго      ильягаранин   мать       ёмиёри    кира
