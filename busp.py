@@ -30,7 +30,7 @@ def rint():
 def run_every_10_minutes():
     while True:
         print("kakashka")
-        time.sleep(1200)
+        time.sleep(840)
 
         
 
