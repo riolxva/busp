@@ -27,14 +27,15 @@ def rint():
     return x 
 
 
-def run_every_10_minutes():
+def run_every_1_minute():
     while True:
-        print("kakashka")
-        time.sleep(60)
+        resp = requests.get("https://www.google.com/search?q=кабан")
+        print(resp.text)
+        time.sleep(120)
 
         
 
-thread = threading.Thread(target=run_every_10_minutes)
+thread = threading.Thread(target=run_every_1_minute)
 
 thread.daemon = True
 
