@@ -29,8 +29,7 @@ def rint():
 
 def run_every_1_minute():
     while True:
-        resp = requests.get("https://busp.onrender.com?дабдаб54")
-        print(resp.text)
+        requests.get("https://busp.onrender.com?дабдаб54")
         time.sleep(120)
 
         
@@ -41,7 +40,7 @@ thread.daemon = True
 thread.start()
 
 white = [ 1749290548, 706686986, 1820132315, 1389182288, 752618557, 1816422993, 1240163871, 7802718619, 943904951 ] 
-#             я          саша       марго    ильягаранин   мать       ёмиёри      кира       Игорек      тимурик
+#             я          саша      марго     ильягаранин    мать      ёмиёри      кира       Игорек      тимурик
 TOKEN = "7123200792:AAEUI5j0OhDnDObRIGXCN8NEInwSPSEh5z4"
 
 dp = Dispatcher()
@@ -54,7 +53,10 @@ async def command_start_handler(message: Message) -> None:
         button2 = KeyboardButton(text='Действующие билеты')
         button3 = KeyboardButton(text='Подписка СБП')
         button4 = KeyboardButton(text='Ещё...')
-        keyboard = ReplyKeyboardMarkup(resize_keyboard=True).add(button1, button2, button3, button4)
+        keyboard = ReplyKeyboardMarkup(
+            keyboard=[[button1, button2], [button3, button4]],  
+            resize_keyboard=True  
+        )
         await message.answer(f"Hello, {html.bold(message.from_user.full_name)}!",reply_markup=keyboard)
         
 
