@@ -50,10 +50,10 @@ dp = Dispatcher()
 @dp.message(CommandStart())
 async def command_start_handler(message: Message) -> None:
     if message.from_user.id in white:
-        button1 = KeyboardButton('Купить билет')
-        button2 = KeyboardButton('Действующие билеты')
-        button3 = KeyboardButton('Подписка СБП')
-        button4 = KeyboardButton('Ещё...')
+        button1 = KeyboardButton(text='Купить билет')
+        button2 = KeyboardButton(text='Действующие билеты')
+        button3 = KeyboardButton(text='Подписка СБП')
+        button4 = KeyboardButton(text='Ещё...')
         keyboard = ReplyKeyboardMarkup(resize_keyboard=True).add(button1, button2, button3, button4)
         await message.answer(f"Hello, {html.bold(message.from_user.full_name)}!",reply_markup=keyboard)
         
