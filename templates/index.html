@@ -1095,7 +1095,7 @@
           <app-ticket-info>
             <!---->
             <!---->
-            <h2 id="counter" style="text-align: center; padding-top: 1vh;" class="ng-star-inserted">Действует: 0 сек.</h2>
+            <h2 id="counter" style="text-align: center; padding-top: 1vh;" class="ng-star-inserted">Действует: 15 сек.</h2>
             <!---->
             <nz-tabset nzcentered="" class="ant-tabs ant-tabs-centered ant-tabs-top ant-tabs-default ng-star-inserted">
               <nz-tabs-nav class="ant-tabs-nav ng-star-inserted">
@@ -1459,7 +1459,6 @@
 
   
         const counter = document.getElementById("counter")
-        console.log(counter)
         let time_left = 14
         let timer = setInterval(function() {
           counter.innerHTML = `Действует: ${time_left} сек.`;

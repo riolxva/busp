@@ -55,6 +55,7 @@ async def command_start_handler(message: Message) -> None:
 
 @dp.message()
 async def echo_handler(message: Message) -> None:
+    await message.delete()
     if message.from_user.id in white:
         sp = message.text.split()
         mul = int(sp[1]) if len(sp) == 2 else 1
@@ -65,7 +66,6 @@ async def echo_handler(message: Message) -> None:
             [InlineKeyboardButton(text="🎫 Предъявить билет", web_app=WebAppInfo(url=f'''https://busp.onrender.com?perevoz={response.json()['basicTripInfo']['carrierName']}&route={response.json()['basicTripInfo']['routeName'].replace('"','@')}&govno={response.json()['basicTripInfo']['vehicleGovNumber']}&cost={response.json()['tariffs'][0]['tariffValueCent']//100*mul}&date={time.day}&hour={str(time.hour).zfill(2)}&min={str(time.minute).zfill(2)}&count={mul}'''))]
         ])
         await message.answer(f"Билет куплен успешно.\n{response.json()['basicTripInfo']['carrierName']}\n🚏 {response.json()['basicTripInfo']['routeName']}\n{asd(response)}{response.json()['basicTripInfo']['vehicleGovNumber']}\n🪙 Тариф: Полный {response.json()['tariffs'][0]['tariffValueCent']*mul//100},00 ₽\n🎫 Билет №{rint()}", reply_markup=w)
-        await message.delete()
     else:
         return
 
