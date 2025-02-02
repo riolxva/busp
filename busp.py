@@ -27,18 +27,6 @@ def rint():
     return x 
 
 
-def run_every_1_minute():
-    while True:
-        requests.get("https://busp.onrender.com?дабдаб54")
-        time.sleep(120)
-
-        
-thread = threading.Thread(target=run_every_1_minute)
-
-thread.daemon = True
-
-thread.start()
-
 white = [ 1749290548, 706686986, 1820132315, 1389182288, 752618557, 1816422993, 1240163871, 7802718619, 943904951 ] 
 #             я          саша      марго     ильягаранин    мать      ёмиёри      кира       Игорек      тимурик
 TOKEN = "7123200792:AAEUI5j0OhDnDObRIGXCN8NEInwSPSEh5z4"
