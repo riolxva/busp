@@ -59,7 +59,7 @@ async def echo_handler(message: Message) -> None:
         response = requests.post(f"https://buspaybot.icom24.ru/api/search/qr?botName=buspaybot&scannedCode={sp[0]}", json=data)  
         time = datetime.now() + timedelta(hours=7)
         w = InlineKeyboardMarkup(inline_keyboard=[
-            [InlineKeyboardButton(text="🎫 Предъявить билет", web_app=WebAppInfo(url=f'''https://busp-1.onrender.com?perevoz={response.json()['basicTripInfo']['carrierName']}&route={response.json()['basicTripInfo']['routeName'].replace('"','@')}&govno={response.json()['basicTripInfo']['vehicleGovNumber']}&cost={response.json()['tariffs'][0]['tariffValueCent']//100*mul}&date={time.day}&hour={str(time.hour).zfill(2)}&min={str(time.minute).zfill(2)}&count={mul}'''))]
+            [InlineKeyboardButton(text="🎫 Предъявить билет", web_app=WebAppInfo(url=f'''https://busp-1.onrender.com?perevoz={response.json()['basicTripInfo']['carrierName'].replace('"','@')}&route={response.json()['basicTripInfo']['routeName'].replace('"','@')}&govno={response.json()['basicTripInfo']['vehicleGovNumber']}&cost={response.json()['tariffs'][0]['tariffValueCent']//100*mul}&date={time.day}&hour={str(time.hour).zfill(2)}&min={str(time.minute).zfill(2)}&count={mul}'''))]
         ])
         await message.answer(f"Билет куплен успешно.\n{response.json()['basicTripInfo']['carrierName']}\n🚏 {response.json()['basicTripInfo']['routeName']}\n{asd(response)}{response.json()['basicTripInfo']['vehicleGovNumber']}\n🪙 Тариф: Полный {response.json()['tariffs'][0]['tariffValueCent']*mul//100},00 ₽\n🎫 Билет №{rint()}", reply_markup=w)
     else:
