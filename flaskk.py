@@ -14,7 +14,7 @@ def popakaka():
     hour = request.args.get("hour")
     min = request.args.get("min")
     count = request.args.get("count")
-    return render_template("index.html", perevoz=STR(perevoz).replace("@", '"'), route=str(route).replace("@", '"'), govno=govno, cost=cost, date=date, hour=hour, min=min, count=count)
+    return render_template("index.html", perevoz=str(perevoz).replace("@", '"'), route=str(route).replace("@", '"'), govno=govno, cost=cost, date=date, hour=hour, min=min, count=count)
 
 
 app.run(host='0.0.0.0', port=5000)
