@@ -57,7 +57,7 @@ async def echo_handler(message: Message) -> None:
         mul = int(sp[1]) if len(sp) == 2 else 1
         data = {"initData": "query_id=AAGuxstaAwAAAK7Gy1o-X7cY&user=%7B%22id%22%3A7965755054%2C%22first_name%22%3A%22%D0%90%D0%B1%D0%B4%D0%B8%22%2C%22last_name%22%3A%22%D0%9C%D0%B0%D0%B3%D0%BE%D0%BC%D0%B5%D0%B4%D0%BE%D0%B2%D0%B8%D1%87%22%2C%22username%22%3A%22raballaha228%22%2C%22language_code%22%3A%22ru%22%2C%22allows_write_to_pm%22%3Atrue%2C%22photo_url%22%3A%22https%3A%5C%2F%5C%2Ft.me%5C%2Fi%5C%2Fuserpic%5C%2F320%5C%2FAUyop1HtgQvcqu6zWQOlGcFHze1MJ3BDF_RtovH89yClo-rUhRYcwKeNrffsMsQ5.svg%22%7D&auth_date=1742819704&signature=aq8F-J3ATDYus0DiG8-nW-XWoFJHHz49hu66lWCoPzJKaXAGiO_DsuZQKm563bGiBsl9bI0j1tcxr2AM-_EbDA&hash=afa36368452464c886d12ddfaf1ffa443f60552f6eeedbdb309fdc0218e6d22b"}
         response = requests.post(f"https://buspaybot.icom24.ru/api/search/qr?botName=buspaybot&scannedCode={sp[0]}", json=data)  
-        time = datetime.now() + timedelta(hours=7)
+        time = datetime.now()
         w = InlineKeyboardMarkup(inline_keyboard=[
             [InlineKeyboardButton(text="🎫 Предъявить билет", web_app=WebAppInfo(url=f'''https://busp-1.onrender.com?perevoz={response.json()['basicTripInfo']['carrierName'].replace('"','@')}&route={response.json()['basicTripInfo']['routeName'].replace('"','@')}&govno={response.json()['basicTripInfo']['vehicleGovNumber']}&cost={response.json()['tariffs'][0]['tariffValueCent']//100*mul}&date={time.day}&hour={str(time.hour).zfill(2)}&min={str(time.minute).zfill(2)}&count={mul}'''))]
         ])
