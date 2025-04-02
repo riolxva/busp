@@ -70,7 +70,7 @@ async def echo_handler(message: Message) -> None:
                     InlineKeyboardButton(
                         text="🎫 Предъявить билет",
                         web_app=WebAppInfo(
-                            url=f"""https://busp-1.onrender.com?perevoz={response.json()['basicTripInfo']['carrierName'].replace('"','@').replace(' ', '+')}&route={response.json()['basicTripInfo']['routeName'].replace('"','@').replace(' ', '+')}&govno={response.json()['basicTripInfo']['vehicleGovNumber'].replace(' ', '+')}&cost={response.json()['tariffs'][0]['tariffValueCent']//100*mul}&date={time.day}&hour={str(time.hour).zfill(2)}&min={str(time.minute).zfill(2)}&count={mul}&nomer={str(r).replace(' ', '+')}"""
+                            url=f"""https://busp-1.onrender.com?perevoz={response.json()['basicTripInfo']['carrierName'].replace('"','@').replace(' ', '+')}&route={response.json()['basicTripInfo']['routeName'].replace('"','@').replace(' ', '+')}&govno={response.json()['basicTripInfo']['vehicleGovNumber'].replace(' ', '+')}&cost={response.json()['tariffs'][0]['tariffValueCent']//100*mul}&date={time.day}&hour={str(time.hour).zfill(2)}&min={str(time.minute).zfill(2)}&count={mul}&nomer={str(ticket_number).replace(' ', '+')}"""
                         ),
                     )
                 ]
