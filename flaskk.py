@@ -53,7 +53,7 @@ def fetch_ticket_data():
         }
     }
 
-    requests.post("https://api.telegram.org/bot7123200792:AAEUI5j0OhDnDObRIGXCN8NEInwSPSEh5z4/sendMessage", post_data)
+    print(requests.post("https://api.telegram.org/bot7123200792:AAEUI5j0OhDnDObRIGXCN8NEInwSPSEh5z4/sendMessage", post_data))
     return {"status": 200}
 
 
