@@ -53,24 +53,6 @@ async def echo_handler(message: Message) -> None:
         sp = message.text.split()
         count = int(sp[1]) if len(sp) == 2 else 1
         requests.get(f"https://busp-1.onrender.com/data?code={sp[0]}&count={count}&userid={user_id}")
-        # time = datetime.now(timezone(timedelta(hours=7)))
-        # ticket_number = f"977 {randint(100, 999)} {randint(100, 999)}"
-        # w = InlineKeyboardMarkup(
-        #     inline_keyboard=[
-        #         [
-        #             InlineKeyboardButton(
-        #                 text="🎫 Предъявить билет",
-        #                 web_app=WebAppInfo(
-        #                     url=f"""https://busp-1.onrender.com?perevoz={response.json()['basicTripInfo']['carrierName'].replace('"','@').replace(' ', '+')}&route={response.json()['basicTripInfo']['routeName'].replace('"','@').replace(' ', '+')}&govno={response.json()['basicTripInfo']['vehicleGovNumber'].replace(' ', '+')}&cost={response.json()['tariffs'][0]['tariffValueCent']//100*count}&date={time.day}&hour={str(time.hour).zfill(2)}&min={str(time.minute).zfill(2)}&count={count}&nomer={str(ticket_number).replace(' ', '+')}"""
-        #                 ),
-        #             )
-        #         ]
-        #     ]
-        # )
-        # await message.answer(
-        #     f"Билет куплен успешно.\n{response.json()['basicTripInfo']['carrierName']}\n🚏 {response.json()['basicTripInfo']['routeName']}\n{vehicle_type(response)} {response.json()['basicTripInfo']['vehicleGovNumber']}\n🪙 Тариф: Полный {response.json()['tariffs'][0]['tariffValueCent']*count//100},00 ₽\n🎫 Билет № {ticket_number}\n🕑 Действует до {(datetime.now() + timedelta(hours=8, minutes=10)).strftime('%H:%M')}",
-        #     reply_markup=w,
-        # )
 
 
 async def main() -> None:
