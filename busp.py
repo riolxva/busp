@@ -9,13 +9,9 @@ from aiogram.enums import ParseMode
 from aiogram.filters import CommandStart
 from aiogram.types import (
     Message,
-    InlineKeyboardMarkup,
-    InlineKeyboardButton,
-    WebAppInfo,
     ReplyKeyboardMarkup,
     KeyboardButton,
 )
-from datetime import datetime, timedelta, timezone
 
 
 def rint():

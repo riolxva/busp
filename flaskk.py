@@ -12,6 +12,17 @@ def vehicle_type(a):
         return "🚎"
     elif a == "Трамвай":
         return "🚃"
+    
+
+def get_vehicle_data(code):
+    data = {
+        "initData": "query_id=AAH4J3doAgAAAPgnd2j3JsBl&user=%7B%22id%22%3A6047606776%2C%22first_name%22%3A%22%D0%98%D0%BE%D1%81%D0%B8%D1%84%22%2C%22last_name%22%3A%22%D0%9E%D0%B1%D1%80%D1%83%D1%87%D0%BD%D0%B8%D0%BA%22%2C%22username%22%3A%22iosiffffffffff%22%2C%22language_code%22%3A%22ru%22%2C%22allows_write_to_pm%22%3Atrue%2C%22photo_url%22%3A%22https%3A%5C%2F%5C%2Ft.me%5C%2Fi%5C%2Fuserpic%5C%2F320%5C%2FPCoBIep_PONogRkLgAO4JO8rZZ9FtXKMUaJ_mxJamtW4YuAkWVpuafJT0t4mY0vb.svg%22%7D&auth_date=1743497860&signature=RkwFfNGg4fRhNF9sdxSzS9L1dIjN8MGxqWffroH7NZ34W7Jfo7yvq1xNLAF8Dt5yK7RrfvePignNWnHiNgQaAg&hash=3f3e2890e68f8119965676db5836ecbaec1a9c046d43e66bf710cefb722c7fb6"
+    }
+    response = requests.post(
+        f"https://buspaybot.icom24.ru/api/search/qr?botName=buspaybot&scannedCode={code}",
+        json=data,
+    ).json()
+    return response
 
 
 app = Flask(__name__)
@@ -23,16 +34,21 @@ def fetch_ticket_data():
     count = request.args.get("count")
     userid = request.args.get("userid")
 
+    with open("codes.json", "r") as codes:
+        cached_codes = json.load(codes)
+        if code in cached_codes:
+            response = cached_codes[code]
+        else:
+            response = get_vehicle_data(code)
+
+
     time = datetime.now(timezone(timedelta(hours=7)))
     ticket_number = f"977 {randint(100, 999)} {randint(100, 999)}"
 
-    data = {
-            "initData": "query_id=AAH4J3doAgAAAPgnd2j3JsBl&user=%7B%22id%22%3A6047606776%2C%22first_name%22%3A%22%D0%98%D0%BE%D1%81%D0%B8%D1%84%22%2C%22last_name%22%3A%22%D0%9E%D0%B1%D1%80%D1%83%D1%87%D0%BD%D0%B8%D0%BA%22%2C%22username%22%3A%22iosiffffffffff%22%2C%22language_code%22%3A%22ru%22%2C%22allows_write_to_pm%22%3Atrue%2C%22photo_url%22%3A%22https%3A%5C%2F%5C%2Ft.me%5C%2Fi%5C%2Fuserpic%5C%2F320%5C%2FPCoBIep_PONogRkLgAO4JO8rZZ9FtXKMUaJ_mxJamtW4YuAkWVpuafJT0t4mY0vb.svg%22%7D&auth_date=1743497860&signature=RkwFfNGg4fRhNF9sdxSzS9L1dIjN8MGxqWffroH7NZ34W7Jfo7yvq1xNLAF8Dt5yK7RrfvePignNWnHiNgQaAg&hash=3f3e2890e68f8119965676db5836ecbaec1a9c046d43e66bf710cefb722c7fb6"
-    }
-    response = requests.post(
-        f"https://buspaybot.icom24.ru/api/search/qr?botName=buspaybot&scannedCode={code}",
-        json=data,
-    ).json()
+    if not (code in cached_codes):
+        with open("codes.json", "w") as codes:
+            cached_codes[code] = response
+            json.dump(cached_codes, codes, indent=4)
 
 
     info = response["basicTripInfo"]
@@ -40,7 +56,7 @@ def fetch_ticket_data():
     
     post_data = {
         "chat_id": int(userid),
-        "text": f"Билет куплен успешно.\n{info['carrierName']}\n🚏 {info['routeName']}\n{vehicle_type(info['vehicleTypeName'])} {info['vehicleGovNumber']}\n🪙 Тариф: Полный {tariffs['tariffValueCent']*int(count)//100},00 ₽\n🎫 Билет № {ticket_number}\n🕑 Действует до {(datetime.now() + timedelta(hours=1, minutes=10)).strftime('%H:%M')}",
+        "text": f"Билет куплен успешно.\n{info['carrierName']}\n🚏 {info['routeName']}\n{vehicle_type(info['vehicleTypeName'])} {info['vehicleGovNumber']}\n🪙 Тариф: Полный {tariffs['tariffValueCent']*int(count)//100},00 ₽\n🎫 Билет № {ticket_number}\n🕑 Действует до {(time + timedelta(hours=1, minutes=10)).strftime('%H:%M')}",
         "reply_markup": {
             "inline_keyboard": [
                 [
