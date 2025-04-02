@@ -38,7 +38,7 @@ def fetch_ticket_data():
     
     post_data = {
         "chat_id": int(userid),
-        "text": f"Билет куплен успешно.\n{info['carrierName']}\n🚏 {info['routeName']}\n{vehicle_type(info["vehicleTypeName"])} {info['vehicleGovNumber']}\n🪙 Тариф: Полный {tariffs['tariffValueCent']*count//100},00 ₽\n🎫 Билет № {ticket_number}\n🕑 Действует до {(datetime.now() + timedelta(hours=1, minutes=10)).strftime('%H:%M')}",
+        "text": f"Билет куплен успешно.\n{info['carrierName']}\n🚏 {info['routeName']}\n{vehicle_type(info['vehicleTypeName'])} {info['vehicleGovNumber']}\n🪙 Тариф: Полный {tariffs['tariffValueCent']*count//100},00 ₽\n🎫 Билет № {ticket_number}\n🕑 Действует до {(datetime.now() + timedelta(hours=1, minutes=10)).strftime('%H:%M')}",
         "reply_markup": {
             "inline_keyboard": [
                 [
