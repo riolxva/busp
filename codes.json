@@ -1,3 +1,98 @@
 {
-    "0": 1
+    "0": {
+        "basicTripInfo": {
+            "cityId": 1,
+            "routeId": 283,
+            "routeName": "\u041f\u0430\u0440\u043a \"\u041f\u0440\u0438\u0449\u0435\u043f\u043a\u0430\" - \u0421\u043f\u043e\u0440\u0442\u0437\u0430\u043b",
+            "routeNumber": "21",
+            "carrierId": 136,
+            "carrierName": "\u0418\u041f \u041f\u0430\u0442\u0440\u0438\u043d \u041d. \u041d.",
+            "vehicleId": "749613e2-f05b-4503-b74f-7d083866d7f3",
+            "vehicleGovNumber": "\u0445312\u043c\u0432124",
+            "vehicleTypeId": 1,
+            "vehicleTypeName": "\u0410\u0432\u0442\u043e\u0431\u0443\u0441",
+            "isRouteSuburban": false
+        },
+        "tariffs": [
+            {
+                "tariffId": 782451,
+                "tariffTypeId": 1,
+                "tariffTypeName": "\u041f\u043e\u043b\u043d\u044b\u0439",
+                "tariffValueCent": 3500,
+                "benefitValueCent": 0,
+                "from": {
+                    "id": 1,
+                    "name": "\u041f\u043e \u0433\u043e\u0440\u043e\u0434\u0443"
+                },
+                "to": {
+                    "id": 1,
+                    "name": "\u041f\u043e \u0433\u043e\u0440\u043e\u0434\u0443"
+                }
+            }
+        ]
+    },
+    "506663": {
+        "basicTripInfo": {
+            "cityId": 1,
+            "routeId": 96,
+            "routeName": "\u0412\u043e\u0441\u0442\u043e\u0447\u043d\u044b\u0439-\u0421\u0435\u043b\u044c\u0445\u043e\u0437\u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0441",
+            "routeNumber": "43",
+            "carrierId": 138,
+            "carrierName": "\u041e\u041e\u041e \u0412\u0430\u0432\u0443\u043b\u0438\u043d-\u041a",
+            "vehicleId": "2fed4333-655c-41de-a1f3-3d25b2c308f1",
+            "vehicleGovNumber": "\u0443220\u0441\u0441124",
+            "vehicleTypeId": 1,
+            "vehicleTypeName": "\u0410\u0432\u0442\u043e\u0431\u0443\u0441",
+            "isRouteSuburban": false
+        },
+        "tariffs": [
+            {
+                "tariffId": 782451,
+                "tariffTypeId": 1,
+                "tariffTypeName": "\u041f\u043e\u043b\u043d\u044b\u0439",
+                "tariffValueCent": 3500,
+                "benefitValueCent": 0,
+                "from": {
+                    "id": 1,
+                    "name": "\u041f\u043e \u0433\u043e\u0440\u043e\u0434\u0443"
+                },
+                "to": {
+                    "id": 1,
+                    "name": "\u041f\u043e \u0433\u043e\u0440\u043e\u0434\u0443"
+                }
+            }
+        ]
+    },
+    "500999": {
+        "basicTripInfo": {
+            "cityId": 1,
+            "routeId": 283,
+            "routeName": "\u041f\u0430\u0440\u043a \"\u041f\u0440\u0438\u0449\u0435\u043f\u043a\u0430\" - \u0421\u043f\u043e\u0440\u0442\u0437\u0430\u043b",
+            "routeNumber": "21",
+            "carrierId": 136,
+            "carrierName": "\u0418\u041f \u041f\u0430\u0442\u0440\u0438\u043d \u041d. \u041d.",
+            "vehicleId": "749613e2-f05b-4503-b74f-7d083866d7f3",
+            "vehicleGovNumber": "\u0445312\u043c\u0432124",
+            "vehicleTypeId": 1,
+            "vehicleTypeName": "\u0410\u0432\u0442\u043e\u0431\u0443\u0441",
+            "isRouteSuburban": false
+        },
+        "tariffs": [
+            {
+                "tariffId": 782451,
+                "tariffTypeId": 1,
+                "tariffTypeName": "\u041f\u043e\u043b\u043d\u044b\u0439",
+                "tariffValueCent": 3500,
+                "benefitValueCent": 0,
+                "from": {
+                    "id": 1,
+                    "name": "\u041f\u043e \u0433\u043e\u0440\u043e\u0434\u0443"
+                },
+                "to": {
+                    "id": 1,
+                    "name": "\u041f\u043e \u0433\u043e\u0440\u043e\u0434\u0443"
+                }
+            }
+        ]
+    }
 }

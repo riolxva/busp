@@ -26,7 +26,7 @@ def get_vehicle_data(code):
     response = requests.post(
         f"https://buspaybot.icom24.ru/api/search/qr?botName=buspaybot&scannedCode={code}",
         json=data,
-    ).json()
+    )
     return response
 
 
@@ -51,7 +51,7 @@ def delete_message(chat_id, message_id):
 app = Flask(__name__)
 
 
-@app.route("/data/", methods=["POST"])
+@app.route("/data", methods=["POST"])
 def fetch_ticket_data():
     data = request.get_json()
     if 'message' in data:
@@ -65,7 +65,7 @@ def fetch_ticket_data():
         delete_message(chat_id, message_id)
 
         try:
-            with open("codes.json", "r") as codes:
+            with open("codes.json", "r", encoding='utf-8') as codes:
                 cached_codes = json.load(codes)
         except (FileNotFoundError, json.JSONDecodeError):
             cached_codes = {}
@@ -74,8 +74,11 @@ def fetch_ticket_data():
             response = cached_codes[code]
         else:
             response = get_vehicle_data(code)
-            cached_codes[code] = response
-            with open("codes.json", "w") as codes:
+            if response.status_code != 200:
+                send_message(chat_id, "Ошибка получения данных. Попробуйте позже.")
+                return jsonify({"status": "error"}), 200
+            cached_codes[code] = response.json()
+            with open("codes.json", "w", encoding='utf-8') as codes:
                 json.dump(cached_codes, codes, indent=4)
 
         time = datetime.now(timezone(timedelta(hours=7)))
@@ -119,5 +122,5 @@ def generate_ticket():
     return render_template("index.html", perevoz=str(perevoz).replace("@", '"'), route=str(route).replace("@", '"'), govno=govno, cost=cost, date=date, hour=hour, min=min, count=count, jopa=jopa)
 
 
-app.run(host='0.0.0.0', port=5000, ssl_context=None)
+app.run(host='0.0.0.0', port=5000, debug=True)
 
