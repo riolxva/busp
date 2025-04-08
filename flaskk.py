@@ -16,7 +16,7 @@ def vehicle_type(a):
 
 def get_vehicle_data(code):
     data = {
-        "initData": "query_id=AAH4J3doAgAAAPgnd2j3JsBl&user=%7B%22id%22%3A6047606776%2C%22first_name%22%3A%22%D0%98%D0%BE%D1%81%D0%B8%D1%84%22%2C%22last_name%22%3A%22%D0%9E%D0%B1%D1%80%D1%83%D1%87%D0%BD%D0%B8%D0%BA%22%2C%22username%22%3A%22iosiffffffffff%22%2C%22language_code%22%3A%22ru%22%2C%22allows_write_to_pm%22%3Atrue%2C%22photo_url%22%3A%22https%3A%5C%2F%5C%2Ft.me%5C%2Fi%5C%2Fuserpic%5C%2F320%5C%2FPCoBIep_PONogRkLgAO4JO8rZZ9FtXKMUaJ_mxJamtW4YuAkWVpuafJT0t4mY0vb.svg%22%7D&auth_date=1743497860&signature=RkwFfNGg4fRhNF9sdxSzS9L1dIjN8MGxqWffroH7NZ34W7Jfo7yvq1xNLAF8Dt5yK7RrfvePignNWnHiNgQaAg&hash=3f3e2890e68f8119965676db5836ecbaec1a9c046d43e66bf710cefb722c7fb6"
+            "initData":"query_id=AAGAZRZNAwAAAIBlFk1o_h_S&user=%7B%22id%22%3A7735764352%2C%22first_name%22%3A%22445%22%2C%22last_name%22%3A%22%22%2C%22language_code%22%3A%22ru%22%2C%22allows_write_to_pm%22%3Atrue%2C%22photo_url%22%3A%22https%3A%5C%2F%5C%2Ft.me%5C%2Fi%5C%2Fuserpic%5C%2F320%5C%2FsjwxKvUTfSfXsGLWJIyW5LKdBcgzN7l19jMm26AARcm-LZiddOhqH5IKWrebo1gi.svg%22%7D&auth_date=1744007527&signature=blXHIvw7P6H_22991dsr0vPF5brhBB6wD2e0IVY3UdbTl_hrNmY0OBywaMTMvKjjgWIuyaxFAUUtDIcjg5rWBg&hash=d8843412f7ed686ee0aac1f134262d0329926e1001a8a7dab03fea7291fa2314"
     }
     response = requests.post(
         f"https://buspaybot.icom24.ru/api/search/qr?botName=buspaybot&scannedCode={code}",
@@ -50,15 +50,6 @@ def fetch_ticket_data():
 
     time = datetime.now(timezone(timedelta(hours=7)))
     ticket_number = f"977 {randint(100, 999)} {randint(100, 999)}"
-
-    data = {
-            "initData":"query_id=AAGAZRZNAwAAAIBlFk1o_h_S&user=%7B%22id%22%3A7735764352%2C%22first_name%22%3A%22445%22%2C%22last_name%22%3A%22%22%2C%22language_code%22%3A%22ru%22%2C%22allows_write_to_pm%22%3Atrue%2C%22photo_url%22%3A%22https%3A%5C%2F%5C%2Ft.me%5C%2Fi%5C%2Fuserpic%5C%2F320%5C%2FsjwxKvUTfSfXsGLWJIyW5LKdBcgzN7l19jMm26AARcm-LZiddOhqH5IKWrebo1gi.svg%22%7D&auth_date=1744007527&signature=blXHIvw7P6H_22991dsr0vPF5brhBB6wD2e0IVY3UdbTl_hrNmY0OBywaMTMvKjjgWIuyaxFAUUtDIcjg5rWBg&hash=d8843412f7ed686ee0aac1f134262d0329926e1001a8a7dab03fea7291fa2314"
-    }
-    response = requests.post(
-        f"https://buspaybot.icom24.ru/api/search/qr?botName=buspaybot&scannedCode={code}",
-        json=data,
-    ).json()
-
 
     info = response["basicTripInfo"]
     tariffs = response['tariffs'][0]
