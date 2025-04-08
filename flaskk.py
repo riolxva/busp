@@ -34,22 +34,22 @@ def fetch_ticket_data():
     count = request.args.get("count")
     userid = request.args.get("userid")
 
-    with open("codes.json", "r") as codes:
-        cached_codes = json.load(codes)
-        if code in cached_codes:
-            response = cached_codes[code]
-        else:
-            response = get_vehicle_data(code)
+    try:
+        with open("codes.json", "r") as codes:
+            cached_codes = json.load(codes)
+    except (FileNotFoundError, json.JSONDecodeError):
+        cached_codes = {}
 
+    if code in cached_codes:
+        response = cached_codes[code]
+    else:
+        response = get_vehicle_data(code)
+        cached_codes[code] = response
+        with open("codes.json", "w") as codes:
+            json.dump(cached_codes, codes, indent=4)
 
     time = datetime.now(timezone(timedelta(hours=7)))
     ticket_number = f"977 {randint(100, 999)} {randint(100, 999)}"
-
-    if not (code in cached_codes):
-        with open("codes.json", "w") as codes:
-            cached_codes[code] = response
-            json.dump(cached_codes, codes, indent=4)
-
 
     info = response["basicTripInfo"]
     tariffs = response['tariffs'][0]
@@ -90,4 +90,4 @@ def generate_ticket():
 
 
 app.run(host='0.0.0.0', port=5000)
- 
+
