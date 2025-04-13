@@ -20,12 +20,14 @@ def vehicle_type(a):
     
 
 def get_vehicle_data(code):
-    data = {
-            "initData":"query_id=AAGUJdhMAwAAAJQl2Ew2M4HW&user=%7B%22id%22%3A7731684756%2C%22first_name%22%3A%22Jos%C3%A9%20%F0%9F%87%B5%F0%9F%87%B8%22%2C%22last_name%22%3A%22%22%2C%22language_code%22%3A%22en%22%2C%22allows_write_to_pm%22%3Atrue%2C%22photo_url%22%3A%22https%3A%5C%2F%5C%2Ft.me%5C%2Fi%5C%2Fuserpic%5C%2F320%5C%2FA5gihtv78BEIUPaTsOVfWIzy07vlqOkm7c34N5CvNqve2EPCkvdMW9dhGERN48pu.svg%22%7D&auth_date=1744457832&signature=z04e27N9SA6vLkjV7Az1fa79t2IlnAoIK3iknVez6zfGJZZeQvepnpwyXFtXO7yXnrucTXnnpKa8TsHDTUz8Cg&hash=c1f8865a0ffaab6435963132a7dceb5ac84ba15ff38faeea19c9db1743e118ae"
-    }
+    data = {"initData": "query_id=AAHDEPMrAwAAAMMQ8ysFSnoB&user=%7B%22id%22%3A7179800771%2C%22first_name%22%3A%22%D0%90%D1%81%D1%85%D0%B0%D0%B1%22%2C%22last_name%22%3A%22%D0%A2%D0%B0%D0%BC%D0%B0%D0%B5%D0%B2%22%2C%22username%22%3A%22tamaevvvvvvv%22%2C%22language_code%22%3A%22en%22%2C%22allows_write_to_pm%22%3Atrue%2C%22photo_url%22%3A%22https%3A%5C%2F%5C%2Ft.me%5C%2Fi%5C%2Fuserpic%5C%2F320%5C%2FGcx-S6yRZPzGJtvDtS-hr8XvW_Sw_6amA_M8U_7b7JJ3Qp_9-cOKjC1rarcLoP0g.svg%22%7D&auth_date=1744552929&signature=o7pFDOY_UThBmG60w3ep_V-JaZ0yAQ-rN8893gE_d4YlntSHpfiQPopANKzXMk_54vvnEGxv6lqWfsUUs5arCA&hash=ec8294efc41acb86c4e5551702222bda6253bd6fa013ec233bc53d7262eb5c40"}
     response = requests.post(
         f"https://buspaybot.icom24.ru/api/search/qr?botName=buspaybot&scannedCode={code}",
         json=data,
+        proxies={
+            'http': 'http://imdViE:kmaagQNaQbSSqJ1@31.177.108.24:5665',
+            'https': 'http://imdViE:kmaagQNaQbSSqJ1@31.177.108.24:5665'
+        }
     )
     return response
 
