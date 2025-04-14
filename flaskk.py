@@ -49,6 +49,13 @@ def delete_message(chat_id, message_id):
 app = Flask(__name__)
 
 
+@app.route("/cache", methods=["GET"])
+def show_cache():
+    with open("codes.json", "r") as cache:
+        codes = cache.read()
+    return codes
+
+
 @app.route("/data", methods=["POST"])
 def fetch_ticket_data():
     data = request.get_json()
