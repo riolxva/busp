@@ -53,8 +53,8 @@ app = Flask(__name__)
 @app.route("/cache", methods=["GET"])
 def show_cache():
     with open("codes.json", "r") as cache:
-        codes = cache.read()
-    return codes
+        codes = json.loads(cache.read())
+    return jsonify(codes)
 
 
 @app.route("/data", methods=["POST"])
@@ -112,6 +112,7 @@ def fetch_ticket_data():
 
         requests.post("https://api.telegram.org/bot7123200792:AAEUI5j0OhDnDObRIGXCN8NEInwSPSEh5z4/sendMessage", json=post_data)
         return jsonify({"status": "ok"}), 200
+    return jsonify({"status": "error"}), 500
 
 
 @app.route("/", methods=["GET"])
