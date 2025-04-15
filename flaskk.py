@@ -20,7 +20,7 @@ def vehicle_type(a):
     
 
 def get_vehicle_data(code):
-    data = {"initData":"query_id=AAFk4I4lAAAAAGTgjiWo7AK8&user=%7B%22id%22%3A630120548%2C%22first_name%22%3A%22%D1%8D%D1%82%D0%BE%20%D1%8F%22%2C%22last_name%22%3A%22%22%2C%22username%22%3A%22monkiei%22%2C%22language_code%22%3A%22en%22%2C%22allows_write_to_pm%22%3Atrue%2C%22photo_url%22%3A%22https%3A%5C%2F%5C%2Ft.me%5C%2Fi%5C%2Fuserpic%5C%2F320%5C%2FIABXp3YQAw8QqpE0rb_-ezbVImWXiuH2T383LpgrtuE.svg%22%7D&auth_date=1744604979&signature=VLIJ-gN5nimbJuEgGhj6viDFKbfmLExiOsP3oqHmfO_v98e_UWsRqnRPnI71qudFTbnUQktcnvQrYBkxuZu9Aw&hash=570c919fd383fe6ba5428e39fb4287f25897f61201e77099489343707d20d1cb"}
+    data = {"initData":"query_id=AAHpYdhFAwAAAOlh2EUzPKs8&user=%7B%22id%22%3A7614259689%2C%22first_name%22%3A%22KechScam22%22%2C%22last_name%22%3A%22%22%2C%22username%22%3A%22kechscam%22%2C%22language_code%22%3A%22en%22%2C%22allows_write_to_pm%22%3Atrue%2C%22photo_url%22%3A%22https%3A%5C%2F%5C%2Ft.me%5C%2Fi%5C%2Fuserpic%5C%2F320%5C%2FnTAnzaNgUJ6YJHDobauz8QIqR6ENXQRS32iwbUTHxTC-5cx88IWd89npoVNXAUeC.svg%22%7D&auth_date=1744723416&signature=vWfrQSXvrLF3uhmYpzisn_qQeJ-Fg_AXUps0vbR8dzIeZEMhGQILq82PP1JzszSOWX6uUX2cKDLwLtVJ1umzBg&hash=3e7f2721f7fedb97d49b94f1d5f223b8a3ad58f628e697c4f1eb5bdfde99a255"}
     response = requests.post(
         f"https://buspaybot.icom24.ru/api/search/qr?botName=buspaybot&scannedCode={code}",
         json=data
