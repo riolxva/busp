@@ -86,7 +86,10 @@ def fetch_ticket_data():
             elif response.status_code != 200:
                 send_message(chat_id, "Ошибка получения данных. Попробуйте позже.")
                 return jsonify({"status": "error"}), 200
-            cached_codes[code] = response.json()
+            try:
+                cached_codes[code] = response.json()
+            except Exception:
+                return jsonify({"status": "error"}), 200
             with open("codes.json", "w", encoding='utf-8') as codes:
                 json.dump(cached_codes, codes, indent=4)
 
