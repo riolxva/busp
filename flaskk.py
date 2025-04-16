@@ -80,7 +80,10 @@ def fetch_ticket_data():
             response = cached_codes[code]
         else:
             response = get_vehicle_data(code)
-            if response.status_code != 200:
+            if response.status_code == 401:
+                send_message(chat_id, "все инит дата не работает")
+                return jsonify({"status": "error"}), 200
+            elif response.status_code != 200:
                 send_message(chat_id, "Ошибка получения данных. Попробуйте позже.")
                 return jsonify({"status": "error"}), 200
             cached_codes[code] = response.json()
