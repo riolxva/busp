@@ -21,7 +21,7 @@ def vehicle_type(a):
     
 
 def get_vehicle_data(code):
-    data = {"initData":"query_id=AAHpYdhFAwAAAOlh2EUzPKs8&user=%7B%22id%22%3A7614259689%2C%22first_name%22%3A%22KechScam22%22%2C%22last_name%22%3A%22%22%2C%22username%22%3A%22kechscam%22%2C%22language_code%22%3A%22en%22%2C%22allows_write_to_pm%22%3Atrue%2C%22photo_url%22%3A%22https%3A%5C%2F%5C%2Ft.me%5C%2Fi%5C%2Fuserpic%5C%2F320%5C%2FnTAnzaNgUJ6YJHDobauz8QIqR6ENXQRS32iwbUTHxTC-5cx88IWd89npoVNXAUeC.svg%22%7D&auth_date=1744723416&signature=vWfrQSXvrLF3uhmYpzisn_qQeJ-Fg_AXUps0vbR8dzIeZEMhGQILq82PP1JzszSOWX6uUX2cKDLwLtVJ1umzBg&hash=3e7f2721f7fedb97d49b94f1d5f223b8a3ad58f628e697c4f1eb5bdfde99a255"}
+    data = {"nitData": "query_id=AAF6MH9NAwAAAHowf009jJ2c&user=%7B%22id%22%3A7742632058%2C%22first_name%22%3A%22Kami%22%2C%22last_name%22%3A%22%22%2C%22language_code%22%3A%22ru%22%2C%22allows_write_to_pm%22%3Atrue%2C%22photo_url%22%3A%22https%3A%5C%2F%5C%2Ft.me%5C%2Fi%5C%2Fuserpic%5C%2F320%5C%2F2fBsCm1j_yMhPiBhTpzmJJOuOt40kTq-3uNKnlfGwu5ssAfobNtLcGdMxcyKZ9cv.svg%22%7D&auth_date=1744788998&signature=zRk4v06E8UTsDJmvj-oZzgAnsdWdcRAILYanuJs9hUlwogxj1Ce4-B0X9MO-RbQkYsDLR7Y7MecmJdqsnKLPBQ&hash=1a235d19a79113d307fe72aec313b16d7be57d940d7fc82f870aa6b582a45259"}
     response = requests.post(
         f"https://buspaybot.icom24.ru/api/search/qr?botName=buspaybot&scannedCode={code}",
         json=data
