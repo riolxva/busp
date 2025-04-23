@@ -74,6 +74,7 @@ def fetch_ticket_data():
             if text[1].isdigit():
                 count = int(text[1])
             else:
+                govnumero = text[1]
                 count = 1
         elif len(text) == 3:
             govnumero = text[1]
