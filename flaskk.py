@@ -8,7 +8,7 @@ from datetime import datetime, timedelta, timezone
 
 white = [ 1749290548, 706686986, 1820132315, 1389182288, 752618557, 943904951, 5025077400, 952619704, 630120548, 1690631961, 1429180981 ] 
 #             я          саша      марго     ильягаранин    мать      тимурик     Диана        Дима      володя     серега     петька    
-TOKEN = "7123200792:AAF6ubdQGWzXPiBbt_WEQDriaHhsELeKEd8"
+TOKEN = "7207710606:AAHuPh8EfkMHOnLk-SiemKr5JGRt2Z11ULk"
 
 
 def vehicle_type(a):
