@@ -70,18 +70,16 @@ def fetch_ticket_data():
         message_id = data['message']['message_id']
         text = data['message'].get('text', '').split()
         code = text[0]
+        count = 1
         if len(text) == 2:
             if text[1].isdigit():
                 count = int(text[1])
             else:
                 govnumero = text[1]
-                count = 1
         elif len(text) == 3:
             govnumero = text[1]
             if text[2].isdigit():
                 count = int(text[2])
-            else:
-                count = 1
 
     if chat_id in white:
         delete_message(chat_id, message_id)
