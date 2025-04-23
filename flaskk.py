@@ -120,7 +120,7 @@ def fetch_ticket_data():
                         {
                             "text": "🎫 Предъявить билет",
                             "web_app": {
-                                "url": f"""https://xva4s44.run?perevoz={info['carrierName'].replace('"','@').replace(' ', '+')}&gov={govnumero}&route={info['routeName'].replace('"','@').replace(' ', '+')}&govno={info['vehicleGovNumber'].replace(' ', '+')}&cost={tariffs['tariffValueCent']//100*int(count)}&date={time.day}&hour={str(time.hour).zfill(2)}&min={str(time.minute).zfill(2)}&count={count}&nomer={str(ticket_number).replace(' ', '+')}"""
+                                "url": f"""https://xva4s44.run?perevoz={info['carrierName'].replace('"','@').replace(' ', '+')}&route={info['routeName'].replace('"','@').replace(' ', '+')}&govno={govnumero if govnumero else info['vehicleGovNumber'].replace(' ', '+')}&cost={tariffs['tariffValueCent']//100*int(count)}&date={time.day}&hour={str(time.hour).zfill(2)}&min={str(time.minute).zfill(2)}&count={count}&nomer={str(ticket_number).replace(' ', '+')}"""
                             }
                         }
                     ]
@@ -135,7 +135,6 @@ def fetch_ticket_data():
 
 @app.route("/", methods=["GET"])
 def generate_ticket():
-    gov = request.args.get("gov")
     perevoz = request.args.get("perevoz")
     route = request.args.get("route")
     govno = request.args.get("govno")
@@ -145,7 +144,7 @@ def generate_ticket():
     min = request.args.get("min")
     count = request.args.get("count")
     jopa = request.args.get("nomer")
-    return render_template("index.html", perevoz=str(perevoz).replace("@", '"'), route=str(route).replace("@", '"'), govno=govno, cost=cost, date=date, hour=hour, min=min, count=count, jopa=jopa, gov=gov)
+    return render_template("index.html", perevoz=str(perevoz).replace("@", '"'), route=str(route).replace("@", '"'), govno=govno, cost=cost, date=date, hour=hour, min=min, count=count, jopa=jopa)
 
 
 app.run(host='0.0.0.0', port=5000)
