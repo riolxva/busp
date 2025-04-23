@@ -117,7 +117,7 @@ def fetch_ticket_data():
             }
         }
 
-        requests.post("https://api.telegram.org/bot7123200792:AAEUI5j0OhDnDObRIGXCN8NEInwSPSEh5z4/sendMessage", json=post_data)
+        requests.post(f"https://api.telegram.org/bot{TOKEN}/sendMessage", json=post_data)
         return jsonify({"status": "ok"}), 200
     return jsonify({"status": "error"}), 200
 
