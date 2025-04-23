@@ -65,11 +65,22 @@ def show_cache():
 def fetch_ticket_data():
     data = request.get_json()
     if 'message' in data:
+        govnumero = ""
         chat_id = data['message']['chat']['id']
         message_id = data['message']['message_id']
         text = data['message'].get('text', '').split()
         code = text[0]
-        count = int(text[1]) if len(text) == 2 and text[1].isdigit() else 1
+        if len(text) == 2:
+            if text[1].isdigit():
+                count = int(text[1])
+            else:
+                count = 1
+        elif len(text) == 3:
+            govnumero = text[1]
+            if text[2].isdigit():
+                count = int(text[2])
+            else:
+                count = 1
 
     if chat_id in white:
         delete_message(chat_id, message_id)
@@ -102,14 +113,14 @@ def fetch_ticket_data():
         
         post_data = {
             "chat_id": chat_id,
-            "text": f"Билет куплен успешно.\n{info['carrierName']}\n🚏 {info['routeName']}\n{vehicle_type(info['vehicleTypeName'])} {info['vehicleGovNumber']}\n🪙 Тариф: Полный {tariffs['tariffValueCent']*int(count)//100},00 ₽\n🎫 Билет № {ticket_number}\n🕑 Действует до {(time + timedelta(hours=1, minutes=10)).strftime('%H:%M')}",
+            "text": f"Билет куплен успешно.\n{info['carrierName']}\n🚏 {info['routeName']}\n{vehicle_type(info['vehicleTypeName'])} {govnumero if govnumero else info['vehicleGovNumber']}\n🪙 Тариф: Полный {tariffs['tariffValueCent']*int(count)//100},00 ₽\n🎫 Билет № {ticket_number}\n🕑 Действует до {(time + timedelta(hours=1, minutes=10)).strftime('%H:%M')}",
             "reply_markup": {
                 "inline_keyboard": [
                     [
                         {
                             "text": "🎫 Предъявить билет",
                             "web_app": {
-                                "url": f"""https://xva4s44.run?perevoz={info['carrierName'].replace('"','@').replace(' ', '+')}&route={info['routeName'].replace('"','@').replace(' ', '+')}&govno={info['vehicleGovNumber'].replace(' ', '+')}&cost={tariffs['tariffValueCent']//100*int(count)}&date={time.day}&hour={str(time.hour).zfill(2)}&min={str(time.minute).zfill(2)}&count={count}&nomer={str(ticket_number).replace(' ', '+')}"""
+                                "url": f"""https://xva4s44.run?perevoz={info['carrierName'].replace('"','@').replace(' ', '+')}&gov={govnumero}&route={info['routeName'].replace('"','@').replace(' ', '+')}&govno={info['vehicleGovNumber'].replace(' ', '+')}&cost={tariffs['tariffValueCent']//100*int(count)}&date={time.day}&hour={str(time.hour).zfill(2)}&min={str(time.minute).zfill(2)}&count={count}&nomer={str(ticket_number).replace(' ', '+')}"""
                             }
                         }
                     ]
@@ -124,6 +135,7 @@ def fetch_ticket_data():
 
 @app.route("/", methods=["GET"])
 def generate_ticket():
+    gov = request.args.get("gov")
     perevoz = request.args.get("perevoz")
     route = request.args.get("route")
     govno = request.args.get("govno")
@@ -133,7 +145,7 @@ def generate_ticket():
     min = request.args.get("min")
     count = request.args.get("count")
     jopa = request.args.get("nomer")
-    return render_template("index.html", perevoz=str(perevoz).replace("@", '"'), route=str(route).replace("@", '"'), govno=govno, cost=cost, date=date, hour=hour, min=min, count=count, jopa=jopa)
+    return render_template("index.html", perevoz=str(perevoz).replace("@", '"'), route=str(route).replace("@", '"'), govno=govno, cost=cost, date=date, hour=hour, min=min, count=count, jopa=jopa, gov=gov)
 
 
 app.run(host='0.0.0.0', port=5000)
