@@ -107,7 +107,7 @@ def fetch_ticket_data():
                 json.dump(cached_codes, codes, indent=4)
 
         time = datetime.now(timezone(timedelta(hours=7)))
-        ticket_number = f"977 {randint(100, 999)} {randint(100, 999)}"
+        ticket_number = f"1 022 {randint(100, 999)} {randint(100, 999)}"
 
         info = response["basicTripInfo"]
         tariffs = response['tariffs'][0]
