@@ -72,13 +72,13 @@ def fetch_ticket_data():
         code = text[0]
         count = 1
         if len(text) == 2:
-            if text[1].isdigit():
+            if text[1].isdigit() and int(text[1]) < 10:
                 count = int(text[1])
             else:
                 govnumero = text[1]
         elif len(text) == 3:
             govnumero = text[1]
-            if text[2].isdigit():
+            if text[2].isdigit() and int(text[2]) < 10:
                 count = int(text[2])
     else:
         return jsonify({"status": "error"}), 401
