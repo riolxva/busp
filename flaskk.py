@@ -61,7 +61,7 @@ def show_cache():
     return jsonify(codes)
 
 
-@app.route("/data", methods=["POST"])
+@app.route("/fetchdata", methods=["POST"])
 def fetch_ticket_data():
     data = request.get_json()
     if 'message' in data:
