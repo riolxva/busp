@@ -80,6 +80,8 @@ def fetch_ticket_data():
             govnumero = text[1]
             if text[2].isdigit():
                 count = int(text[2])
+    else:
+        return jsonify({"status": "error"}), 401
 
     if chat_id in white:
         delete_message(chat_id, message_id)
