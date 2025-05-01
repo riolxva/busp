@@ -21,9 +21,11 @@ def vehicle_type(a):
     
 
 def get_vehicle_data(code):
-    data = {"initData":"query_id=AAF8GAJPAwAAAHwYAk8-W8JH&user=%7B%22id%22%3A7767988348%2C%22first_name%22%3A%22%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80%22%2C%22last_name%22%3A%22%22%2C%22language_code%22%3A%22ru%22%2C%22allows_write_to_pm%22%3Atrue%2C%22photo_url%22%3A%22https%3A%5C%2F%5C%2Ft.me%5C%2Fi%5C%2Fuserpic%5C%2F320%5C%2FP9BWvBmp88j1paI_9wSwDRppmfQ1ax1Tp682zq2iG7xBGidWN3jORcimSHw3eSWY.svg%22%7D&auth_date=1744819694&signature=8syMBgXYVMbriILY9jk757JOO6DFLqWHpOBBiVXogRAtHoMM5A1RKsiPLzNHK2Ahd-oFfn-Sofe_m7dHQH3uBA&hash=f75fd9c731b41feea1dcbc6cf9c5c05cd1e5e02cd50c8c56e9ee065f70a4e1bb"}
+    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"}
+    data = {"initData":"query_id=AAGssAx7AgAAAKywDHvFeMnk&user=%7B%22id%22%3A6359396524%2C%22first_name%22%3A%22scamshiiittt%22%2C%22last_name%22%3A%22%22%2C%22username%22%3A%22scamshiiittt%22%2C%22language_code%22%3A%22en%22%2C%22allows_write_to_pm%22%3Atrue%2C%22photo_url%22%3A%22https%3A%5C%2F%5C%2Ft.me%5C%2Fi%5C%2Fuserpic%5C%2F320%5C%2FyYIXC6Yz5ky3OdJ3gJba4FE1XGxHaFWtqCOqcmU23PTyZKo0fXAnRzCXCp71ZhCE.svg%22%7D&auth_date=1745176049&signature=3WWVE36b1zS7Bbx6qr5K4hyZ0te3uv3-ZPbcozbu5zir0pJQwnnu5iGTX-ITT6CeVtz4oQvV8ToxMapHWQsQAA&hash=d6d2d49d4c042c056e99718d207f237b47b814214f46bde12bd743ea2bd1ccb1"}
     response = requests.post(
         f"https://buspaybot.icom24.ru/api/search/qr?botName=buspaybot&scannedCode={code}",
+        headers=headers,
         json=data
     )
     return response
