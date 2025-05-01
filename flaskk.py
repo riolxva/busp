@@ -8,7 +8,7 @@ from datetime import datetime, timedelta, timezone
 
 white = [ 1749290548, 706686986, 1820132315, 1389182288, 752618557, 943904951, 5025077400, 952619704, 630120548, 1690631961, 1429180981 ] 
 #             я          саша      марго     ильягаранин    мать      тимурик     Диана        Дима      володя     серега     петька    
-TOKEN = "7123200792:AAEUI5j0OhDnDObRIGXCN8NEInwSPSEh5z4"
+TOKEN = "7123200792:AAGLMTRkP8bbOJPUZdQ5qf9dD-hk_qtJLUI"
 
 
 def vehicle_type(a):
@@ -59,15 +59,27 @@ def show_cache():
     return jsonify(codes)
 
 
-@app.route("/data", methods=["POST"])
+@app.route("/fetchdata", methods=["POST"])
 def fetch_ticket_data():
     data = request.get_json()
     if 'message' in data:
+        govnumero = ""
         chat_id = data['message']['chat']['id']
         message_id = data['message']['message_id']
         text = data['message'].get('text', '').split()
         code = text[0]
-        count = int(text[1]) if len(text) == 2 and text[1].isdigit() else 1
+        count = 1
+        if len(text) == 2:
+            if text[1].isdigit() and len(text[1]) < 2:
+                count = int(text[1])
+            else:
+                govnumero = text[1]
+        elif len(text) == 3:
+            govnumero = text[1]
+            if text[2].isdigit() and len(text[2]) < 2:
+                count = int(text[2])
+    else:
+        return jsonify({"status": "error"}), 401
 
     if chat_id in white:
         delete_message(chat_id, message_id)
@@ -93,21 +105,21 @@ def fetch_ticket_data():
                 json.dump(cached_codes, codes, indent=4)
 
         time = datetime.now(timezone(timedelta(hours=7)))
-        ticket_number = f"977 {randint(100, 999)} {randint(100, 999)}"
+        ticket_number = f"1 022 {randint(100, 999)} {randint(100, 999)}"
 
         info = response["basicTripInfo"]
         tariffs = response['tariffs'][0]
         
         post_data = {
             "chat_id": chat_id,
-            "text": f"Билет куплен успешно.\n{info['carrierName']}\n🚏 {info['routeName']}\n{vehicle_type(info['vehicleTypeName'])} {info['vehicleGovNumber']}\n🪙 Тариф: Полный {tariffs['tariffValueCent']*int(count)//100},00 ₽\n🎫 Билет № {ticket_number}\n🕑 Действует до {(time + timedelta(hours=1, minutes=10)).strftime('%H:%M')}",
+            "text": f"Билет куплен успешно.\n{info['carrierName']}\n🚏 {info['routeName']}\n{vehicle_type(info['vehicleTypeName'])} {govnumero if govnumero else info['vehicleGovNumber']}\n🪙 Тариф: Полный {tariffs['tariffValueCent']*int(count)//100},00 ₽\n🎫 Билет № {ticket_number}\n🕑 Действует до {(time + timedelta(hours=1, minutes=10)).strftime('%H:%M')}",
             "reply_markup": {
                 "inline_keyboard": [
                     [
                         {
                             "text": "🎫 Предъявить билет",
                             "web_app": {
-                                "url": f"""https://xva4s44.run?perevoz={info['carrierName'].replace('"','@').replace(' ', '+')}&route={info['routeName'].replace('"','@').replace(' ', '+')}&govno={info['vehicleGovNumber'].replace(' ', '+')}&cost={tariffs['tariffValueCent']//100*int(count)}&date={time.day}&hour={str(time.hour).zfill(2)}&min={str(time.minute).zfill(2)}&count={count}&nomer={str(ticket_number).replace(' ', '+')}"""
+                                "url": f"""https://xva4s44.run?perevoz={info['carrierName'].replace('"','@').replace(' ', '+')}&route={info['routeName'].replace('"','@').replace(' ', '+')}&govno={govnumero if govnumero else info['vehicleGovNumber'].replace(' ', '+')}&cost={tariffs['tariffValueCent']//100*int(count)}&date={time.day}&hour={str(time.hour).zfill(2)}&min={str(time.minute).zfill(2)}&count={count}&nomer={str(ticket_number).replace(' ', '+')}"""
                             }
                         }
                     ]
@@ -115,7 +127,7 @@ def fetch_ticket_data():
             }
         }
 
-        requests.post("https://api.telegram.org/bot7123200792:AAEUI5j0OhDnDObRIGXCN8NEInwSPSEh5z4/sendMessage", json=post_data)
+        requests.post(f"https://api.telegram.org/bot{TOKEN}/sendMessage", json=post_data)
         return jsonify({"status": "ok"}), 200
     return jsonify({"status": "error"}), 200
 
@@ -134,5 +146,7 @@ def generate_ticket():
     return render_template("index.html", perevoz=str(perevoz).replace("@", '"'), route=str(route).replace("@", '"'), govno=govno, cost=cost, date=date, hour=hour, min=min, count=count, jopa=jopa)
 
 
-app.run(host='0.0.0.0', port=5000)
+if __name__ == '__main__':
+    app.run()
+
 
