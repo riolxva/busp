@@ -80,7 +80,7 @@ def fetch_ticket_data():
                 if text[2].isdigit() and len(text[2]) < 2:
                     count = int(text[2])
     else:
-        return jsonify({"status": "error"}), 401
+        return jsonify({"status": "error"}), 200
 
     if chat_id in white:
         delete_message(chat_id, message_id)
