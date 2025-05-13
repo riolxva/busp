@@ -62,6 +62,7 @@ def show_cache():
 @app.route("/fetchdata", methods=["POST"])
 def fetch_ticket_data():
     data = request.get_json()
+    chat_id = 0
     if 'message' in data:
         if data["message"].get('text'):
             govnumero = ""
