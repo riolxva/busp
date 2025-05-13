@@ -63,21 +63,22 @@ def show_cache():
 def fetch_ticket_data():
     data = request.get_json()
     if 'message' in data:
-        govnumero = ""
-        chat_id = data['message']['chat']['id']
-        message_id = data['message']['message_id']
-        text = data['message'].get('text', '').split()
-        code = text[0]
-        count = 1
-        if len(text) == 2:
-            if text[1].isdigit() and len(text[1]) < 2:
-                count = int(text[1])
-            else:
+        if data["message"].get('text'):
+            govnumero = ""
+            chat_id = data['message']['chat']['id']
+            message_id = data['message']['message_id']
+            text = data['message'].get('text', '').split()
+            code = text[0]
+            count = 1
+            if len(text) == 2:
+                if text[1].isdigit() and len(text[1]) < 2:
+                    count = int(text[1])
+                else:
+                    govnumero = text[1]
+            elif len(text) == 3:
                 govnumero = text[1]
-        elif len(text) == 3:
-            govnumero = text[1]
-            if text[2].isdigit() and len(text[2]) < 2:
-                count = int(text[2])
+                if text[2].isdigit() and len(text[2]) < 2:
+                    count = int(text[2])
     else:
         return jsonify({"status": "error"}), 401
 
