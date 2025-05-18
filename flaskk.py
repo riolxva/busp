@@ -114,7 +114,7 @@ def fetch_ticket_data():
         
         post_data = {
             "chat_id": chat_id,
-            "text": f"Билет куплен успешно.\n{info['carrierName']}\n🚏 {info['routeName']}\n{vehicle_type(info['vehicleTypeName'])} {govnumero if govnumero else info['vehicleGovNumber']}\n🪙 Тариф: Полный {tariffs['tariffValueCent']*int(count)//100},00 ₽\n🎫 Билет № {ticket_number}\n🕑 Действует до {(time + timedelta(hours=1, minutes=10)).strftime('%H:%M')}",
+            "text": f"Билет куплен успешно.\n{info['carrierName']}\n{info['routeNumber']} 🚏 {info['routeName']}\n{vehicle_type(info['vehicleTypeName'])} {govnumero if govnumero else info['vehicleGovNumber']}\n🪙 Тариф: Полный {tariffs['tariffValueCent']*int(count)//100},00 ₽\n🎫 Билет № {ticket_number}\n🕑 Действует до {(time + timedelta(hours=1, minutes=10)).strftime('%H:%M')}",
             "reply_markup": {
                 "inline_keyboard": [
                     [
