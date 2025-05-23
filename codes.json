@@ -830,5 +830,613 @@
           }
         }
       ]
-    }
-  }
+    },
+    "5тр": {
+    "basicTripInfo": {
+        "cityId": 1,
+        "routeId": 72,
+        "routeName": "Поселок Энергетиков-Предмостная площадь",
+        "routeNumber": "5",
+        "carrierId": 11,
+        "carrierName": "МП Городской транспорт",
+        "vehicleId": "bab3ca63-4a56-4b53-9393-4f67b51a64f1",
+        "vehicleGovNumber": "0020",
+        "vehicleTypeId": 2,
+        "vehicleTypeName": "Трамвай",
+        "isRouteSuburban": false
+    },
+    "tariffs": [
+        {
+            "tariffId": 782454,
+            "tariffTypeId": 1,
+            "tariffTypeName": "Полный",
+            "tariffValueCent": 3100,
+            "benefitValueCent": 0,
+            "from": {
+                "id": 1,
+                "name": "По городу"
+            },
+            "to": {
+                "id": 1,
+                "name": "По городу"
+             }
+          }
+      ]
+    },
+    "9": {
+    "basicTripInfo": {
+        "cityId": 1,
+        "routeId": 184,
+        "routeName": "Междугородный автовокзал - В.Базаиха",
+        "routeNumber": "9",
+        "carrierId": 134,
+        "carrierName": "ООО \"СКАД\"",
+        "vehicleId": "3f0255f1-43a3-44a1-87f3-9d143c137081",
+        "vehicleGovNumber": "с931тс124",
+        "vehicleTypeId": 1,
+        "vehicleTypeName": "Автобус",
+        "isRouteSuburban": false
+    },
+    "tariffs": [
+        {
+            "tariffId": 782451,
+            "tariffTypeId": 1,
+            "tariffTypeName": "Полный",
+            "tariffValueCent": 3500,
+            "benefitValueCent": 0,
+            "from": {
+                "id": 1,
+                "name": "По городу"
+            },
+            "to": {
+                "id": 1,
+                "name": "По городу"
+            }
+        }
+    ]
+},
+    "61": {
+    "basicTripInfo": {
+        "cityId": 1,
+        "routeId": 85,
+        "routeName": "мкрн. Солнечный - Шинное кладбище",
+        "routeNumber": "61",
+        "carrierId": 12,
+        "carrierName": "ООО КПАТП",
+        "vehicleId": "d07b997c-3ce3-4247-a78c-e69f5207c196",
+        "vehicleGovNumber": "в708нх124",
+        "vehicleTypeId": 1,
+        "vehicleTypeName": "Автобус",
+        "isRouteSuburban": false
+    },
+    "tariffs": [
+        {
+            "tariffId": 782451,
+            "tariffTypeId": 1,
+            "tariffTypeName": "Полный",
+            "tariffValueCent": 3500,
+            "benefitValueCent": 0,
+            "from": {
+                "id": 1,
+                "name": "По городу"
+            },
+            "to": {
+                "id": 1,
+                "name": "По городу"
+            }
+        }
+    ]
+},
+    "83": {
+    "basicTripInfo": {
+        "cityId": 1,
+        "routeId": 89,
+        "routeName": "Дом учёных - пр. Ульяновский",
+        "routeNumber": "83",
+        "carrierId": 57,
+        "carrierName": "ИП Цугленок М.М.",
+        "vehicleId": "eeede6e8-9ad9-4258-b1ef-50cc76b0a9ff",
+        "vehicleGovNumber": "о977рм124",
+        "vehicleTypeId": 1,
+        "vehicleTypeName": "Автобус",
+        "isRouteSuburban": false
+    },
+    "tariffs": [
+        {
+            "tariffId": 782451,
+            "tariffTypeId": 1,
+            "tariffTypeName": "Полный",
+            "tariffValueCent": 3500,
+            "benefitValueCent": 0,
+            "from": {
+                "id": 1,
+                "name": "По городу"
+            },
+            "to": {
+                "id": 1,
+                "name": "По городу"
+            }
+        }
+    ]
+},
+    "6тр": {
+    "basicTripInfo": {
+        "cityId": 1,
+        "routeId": 73,
+        "routeName": "Поселок Энергетиков-Предмостная площадь",
+        "routeNumber": "6",
+        "carrierId": 11,
+        "carrierName": "МП Городской транспорт",
+        "vehicleId": "e8fa3b3b-1c89-4392-80b7-9d21e2223f50",
+        "vehicleGovNumber": "251",
+        "vehicleTypeId": 2,
+        "vehicleTypeName": "Трамвай",
+        "isRouteSuburban": false
+    },
+    "tariffs": [
+        {
+            "tariffId": 782454,
+            "tariffTypeId": 1,
+            "tariffTypeName": "Полный",
+            "tariffValueCent": 3100,
+            "benefitValueCent": 0,
+            "from": {
+                "id": 1,
+                "name": "По городу"
+            },
+            "to": {
+                "id": 1,
+                "name": "По городу"
+            }
+        }
+    ]
+},
+    "4": {
+    "basicTripInfo": {
+        "cityId": 1,
+        "routeId": 75,
+        "routeName": "Ж/д вокзал-Северо-Западный район",
+        "routeNumber": "4",
+        "carrierId": 11,
+        "carrierName": "МП Городской транспорт",
+        "vehicleId": "ebbb84aa-19f8-4b79-87da-4316a3ae184b",
+        "vehicleGovNumber": "2216",
+        "vehicleTypeId": 3,
+        "vehicleTypeName": "Троллейбус",
+        "isRouteSuburban": false
+    },
+    "tariffs": [
+        {
+            "tariffId": 782455,
+            "tariffTypeId": 1,
+            "tariffTypeName": "Полный",
+            "tariffValueCent": 3100,
+            "benefitValueCent": 0,
+            "from": {
+                "id": 1,
+                "name": "По городу"
+            },
+            "to": {
+                "id": 1,
+                "name": "По городу"
+            }
+        }
+    ]
+},
+    "7": {
+    "basicTripInfo": {
+        "cityId": 1,
+        "routeId": 149,
+        "routeName": "ст. Красноярск-Северный - ДК Кировский",
+        "routeNumber": "7",
+        "carrierId": 15,
+        "carrierName": "ИП Галченкова Е. А.",
+        "vehicleId": "be4b8536-fe19-4a45-a65b-64c36a3147d9",
+        "vehicleGovNumber": "в517тм124",
+        "vehicleTypeId": 1,
+        "vehicleTypeName": "Автобус",
+        "isRouteSuburban": false
+    },
+    "tariffs": [
+        {
+            "tariffId": 782451,
+            "tariffTypeId": 1,
+            "tariffTypeName": "Полный",
+            "tariffValueCent": 3500,
+            "benefitValueCent": 0,
+            "from": {
+                "id": 1,
+                "name": "По городу"
+            },
+            "to": {
+                "id": 1,
+                "name": "По городу"
+            }
+        }
+    ]
+},
+    "81": {
+    "basicTripInfo": {
+        "cityId": 1,
+        "routeId": 150,
+        "routeName": "Ж/д больница - Сибирский элемент",
+        "routeNumber": "81",
+        "carrierId": 133,
+        "carrierName": "ООО Сирена",
+        "vehicleId": "205435e7-5064-4833-8750-35a1d70af570",
+        "vehicleGovNumber": "е301ну124",
+        "vehicleTypeId": 1,
+        "vehicleTypeName": "Автобус",
+        "isRouteSuburban": false
+    },
+    "tariffs": [
+        {
+            "tariffId": 782451,
+            "tariffTypeId": 1,
+            "tariffTypeName": "Полный",
+            "tariffValueCent": 3500,
+            "benefitValueCent": 0,
+            "from": {
+                "id": 1,
+                "name": "По городу"
+            },
+            "to": {
+                "id": 1,
+                "name": "По городу"
+            }
+        }
+    ]
+},
+    "4тр": {
+    "basicTripInfo": {
+        "cityId": 1,
+        "routeId": 71,
+        "routeName": "КрасТЭЦ-предмостная площадь",
+        "routeNumber": "4",
+        "carrierId": 11,
+        "carrierName": "МП Городской транспорт",
+        "vehicleId": "f629d1b0-918f-4d84-8c42-619ca1fc5d78",
+        "vehicleGovNumber": "216",
+        "vehicleTypeId": 2,
+        "vehicleTypeName": "Трамвай",
+        "isRouteSuburban": false
+    },
+    "tariffs": [
+        {
+            "tariffId": 782454,
+            "tariffTypeId": 1,
+            "tariffTypeName": "Полный",
+            "tariffValueCent": 3100,
+            "benefitValueCent": 0,
+            "from": {
+                "id": 1,
+                "name": "По городу"
+            },
+            "to": {
+                "id": 1,
+                "name": "По городу"
+            }
+        }
+    ]
+},
+    "7тр": {
+    "basicTripInfo": {
+        "cityId": 1,
+        "routeId": 74,
+        "routeName": "КрасТЭЦ-предмостная площадь",
+        "routeNumber": "7",
+        "carrierId": 11,
+        "carrierName": "МП Городской транспорт",
+        "vehicleId": "3145e1af-bc67-4721-a939-d50c77c24faa",
+        "vehicleGovNumber": "229",
+        "vehicleTypeId": 2,
+        "vehicleTypeName": "Трамвай",
+        "isRouteSuburban": false
+    },
+    "tariffs": [
+        {
+            "tariffId": 782454,
+            "tariffTypeId": 1,
+            "tariffTypeName": "Полный",
+            "tariffValueCent": 3100,
+            "benefitValueCent": 0,
+            "from": {
+                "id": 1,
+                "name": "По городу"
+            },
+            "to": {
+                "id": 1,
+                "name": "По городу"
+            }
+        }
+    ]
+},
+    "71": {
+    "basicTripInfo": {
+        "cityId": 1,
+        "routeId": 91,
+        "routeName": "Спортзал - пос. Таймыр",
+        "routeNumber": "71",
+        "carrierId": 16,
+        "carrierName": "ИП Галченкова О. Г.",
+        "vehicleId": "46caaade-8280-4e4d-b87a-31d6b5e3a46e",
+        "vehicleGovNumber": "к920тм124",
+        "vehicleTypeId": 1,
+        "vehicleTypeName": "Автобус",
+        "isRouteSuburban": false
+    },
+    "tariffs": [
+        {
+            "tariffId": 782451,
+            "tariffTypeId": 1,
+            "tariffTypeName": "Полный",
+            "tariffValueCent": 3500,
+            "benefitValueCent": 0,
+            "from": {
+                "id": 1,
+                "name": "По городу"
+            },
+            "to": {
+                "id": 1,
+                "name": "По городу"
+            }
+        }
+    ]
+},
+    "98": {
+    "basicTripInfo": {
+        "cityId": 1,
+        "routeId": 148,
+        "routeName": "ЛДК - ОАО \"РУСАЛ\"",
+        "routeNumber": "98",
+        "carrierId": 54,
+        "carrierName": "ИП Гнетов Ю.Н.",
+        "vehicleId": "1c819dc2-2ade-4ac0-8dfa-7fdb8bcac73b",
+        "vehicleGovNumber": "т705оо124",
+        "vehicleTypeId": 1,
+        "vehicleTypeName": "Автобус",
+        "isRouteSuburban": false
+    },
+    "tariffs": [
+        {
+            "tariffId": 782451,
+            "tariffTypeId": 1,
+            "tariffTypeName": "Полный",
+            "tariffValueCent": 3500,
+            "benefitValueCent": 0,
+            "from": {
+                "id": 1,
+                "name": "По городу"
+            },
+            "to": {
+                "id": 1,
+                "name": "По городу"
+            }
+        }
+    ]
+},
+    "9": {
+    "basicTripInfo": {
+        "cityId": 1,
+        "routeId": 184,
+        "routeName": "Междугородный автовокзал - В.Базаиха",
+        "routeNumber": "9",
+        "carrierId": 134,
+        "carrierName": "ООО \"СКАД\"",
+        "vehicleId": "0e2aaff7-bb07-49d1-af75-58f232d4ffff",
+        "vehicleGovNumber": "о217мс124",
+        "vehicleTypeId": 1,
+        "vehicleTypeName": "Автобус",
+        "isRouteSuburban": false
+    },
+    "tariffs": [
+        {
+            "tariffId": 782451,
+            "tariffTypeId": 1,
+            "tariffTypeName": "Полный",
+            "tariffValueCent": 3500,
+            "benefitValueCent": 0,
+            "from": {
+                "id": 1,
+                "name": "По городу"
+            },
+            "to": {
+                "id": 1,
+                "name": "По городу"
+            }
+        }
+    ]
+},
+    "50": {
+    "basicTripInfo": {
+        "cityId": 1,
+        "routeId": 169,
+        "routeName": "Соколовская - Стела",
+        "routeNumber": "50",
+        "carrierId": 71,
+        "carrierName": "ИП Читашвили Н.С.",
+        "vehicleId": "717ac95d-b90c-4e59-ad67-333404fbf268",
+        "vehicleGovNumber": "т733рв124",
+        "vehicleTypeId": 1,
+        "vehicleTypeName": "Автобус",
+        "isRouteSuburban": false
+    },
+    "tariffs": [
+        {
+            "tariffId": 782451,
+            "tariffTypeId": 1,
+            "tariffTypeName": "Полный",
+            "tariffValueCent": 3500,
+            "benefitValueCent": 0,
+            "from": {
+                "id": 1,
+                "name": "По городу"
+            },
+            "to": {
+                "id": 1,
+                "name": "По городу"
+            }
+        }
+    ]
+},
+    "27": {
+    "basicTripInfo": {
+        "cityId": 1,
+        "routeId": 156,
+        "routeName": "Полигон - Преображенский",
+        "routeNumber": "27",
+        "carrierId": 111,
+        "carrierName": "ИП Ялтонский А. М.",
+        "vehicleId": "6bf0ac2d-2d96-4a21-88da-04c48e6cdc69",
+        "vehicleGovNumber": "ае 991 72",
+        "vehicleTypeId": 1,
+        "vehicleTypeName": "Автобус",
+        "isRouteSuburban": false
+    },
+    "tariffs": [
+        {
+            "tariffId": 782451,
+            "tariffTypeId": 1,
+            "tariffTypeName": "Полный",
+            "tariffValueCent": 3500,
+            "benefitValueCent": 0,
+            "from": {
+                "id": 1,
+                "name": "По городу"
+            },
+            "to": {
+                "id": 1,
+                "name": "По городу"
+            }
+        }
+    ]
+},
+    "56": {
+    "basicTripInfo": {
+        "cityId": 1,
+        "routeId": 61,
+        "routeName": "пос. Шинников -Железнодорожный вокзал",
+        "routeNumber": "56",
+        "carrierId": 9,
+        "carrierName": "КПАТП-7",
+        "vehicleId": "c39f6d67-7877-492c-bb09-6b109e5b952e",
+        "vehicleGovNumber": "с671ен124",
+        "vehicleTypeId": 1,
+        "vehicleTypeName": "Автобус",
+        "isRouteSuburban": false
+    },
+    "tariffs": [
+        {
+            "tariffId": 782451,
+            "tariffTypeId": 1,
+            "tariffTypeName": "Полный",
+            "tariffValueCent": 3500,
+            "benefitValueCent": 0,
+            "from": {
+                "id": 1,
+                "name": "По городу"
+            },
+            "to": {
+                "id": 1,
+                "name": "По городу"
+            }
+        }
+    ]
+},
+    "85": {
+    "basicTripInfo": {
+        "cityId": 1,
+        "routeId": 44,
+        "routeName": "Даурская - Сельхозкомплекс",
+        "routeNumber": "85",
+        "carrierId": 48,
+        "carrierName": "ООО \"СТК\"",
+        "vehicleId": "f6f60b4e-c372-4de7-b10c-e16f3832fede",
+        "vehicleGovNumber": "н792рн124",
+        "vehicleTypeId": 1,
+        "vehicleTypeName": "Автобус",
+        "isRouteSuburban": false
+    },
+    "tariffs": [
+        {
+            "tariffId": 782451,
+            "tariffTypeId": 1,
+            "tariffTypeName": "Полный",
+            "tariffValueCent": 3500,
+            "benefitValueCent": 0,
+            "from": {
+                "id": 1,
+                "name": "По городу"
+            },
+            "to": {
+                "id": 1,
+                "name": "По городу"
+            }
+        }
+    ]
+},
+    "78": {
+    "basicTripInfo": {
+        "cityId": 1,
+        "routeId": 165,
+        "routeName": "Стела - Контейнерный двор",
+        "routeNumber": "78",
+        "carrierId": 68,
+        "carrierName": "ИП Бронников А.И.",
+        "vehicleId": "6a3c02f2-d93e-45fe-a818-01baf8deb701",
+        "vehicleGovNumber": "а806оа124",
+        "vehicleTypeId": 1,
+        "vehicleTypeName": "Автобус",
+        "isRouteSuburban": false
+    },
+    "tariffs": [
+        {
+            "tariffId": 782451,
+            "tariffTypeId": 1,
+            "tariffTypeName": "Полный",
+            "tariffValueCent": 3500,
+            "benefitValueCent": 0,
+            "from": {
+                "id": 1,
+                "name": "По городу"
+            },
+            "to": {
+                "id": 1,
+                "name": "По городу"
+            }
+        }
+    ]
+},
+    "61": {
+    "basicTripInfo": {
+        "cityId": 1,
+        "routeId": 85,
+        "routeName": "мкрн. Солнечный - Шинное кладбище",
+        "routeNumber": "61",
+        "carrierId": 12,
+        "carrierName": "ООО КПАТП",
+        "vehicleId": "6b6b20a5-55af-4cd8-af85-e394f81654d2",
+        "vehicleGovNumber": "р196нт124",
+        "vehicleTypeId": 1,
+        "vehicleTypeName": "Автобус",
+        "isRouteSuburban": false
+    },
+    "tariffs": [
+        {
+            "tariffId": 782451,
+            "tariffTypeId": 1,
+            "tariffTypeName": "Полный",
+            "tariffValueCent": 3500,
+            "benefitValueCent": 0,
+            "from": {
+                "id": 1,
+                "name": "По городу"
+            },
+            "to": {
+                "id": 1,
+                "name": "По городу"
+            }
+        }
+    ]
+}  
+}
