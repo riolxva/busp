@@ -1438,5 +1438,230 @@
             }
         }
     ]
-}  
+},
+    "10": {
+    "basicTripInfo": {
+        "cityId": 1,
+        "routeId": 36,
+        "routeName": "пос. Энергетиков-ОАО Красфарма",
+        "routeNumber": "10",
+        "carrierId": 9,
+        "carrierName": "КПАТП-7",
+        "vehicleId": "3413b2b3-e351-4012-adf2-83ad0dbd26fe",
+        "vehicleGovNumber": "в105те124",
+        "vehicleTypeId": 1,
+        "vehicleTypeName": "Автобус",
+        "isRouteSuburban": false
+    },
+    "tariffs": [
+        {
+            "tariffId": 782451,
+            "tariffTypeId": 1,
+            "tariffTypeName": "Полный",
+            "tariffValueCent": 3500,
+            "benefitValueCent": 0,
+            "from": {
+                "id": 1,
+                "name": "По городу"
+            },
+            "to": {
+                "id": 1,
+                "name": "По городу"
+            }
+        }
+    ]
+},
+    "8": {
+    "basicTripInfo": {
+        "cityId": 1,
+        "routeId": 97,
+        "routeName": "ст. Красноярск-Северный - пос. Водников",
+        "routeNumber": "8",
+        "carrierId": 27,
+        "carrierName": "ООО Перевозчик",
+        "vehicleId": "c6282955-c468-4ed4-8e85-7c6aca903209",
+        "vehicleGovNumber": "н561ре124",
+        "vehicleTypeId": 1,
+        "vehicleTypeName": "Автобус",
+        "isRouteSuburban": false
+    },
+    "tariffs": [
+        {
+            "tariffId": 782451,
+            "tariffTypeId": 1,
+            "tariffTypeName": "Полный",
+            "tariffValueCent": 3500,
+            "benefitValueCent": 0,
+            "from": {
+                "id": 1,
+                "name": "По городу"
+            },
+            "to": {
+                "id": 1,
+                "name": "По городу"
+            }
+        }
+    ]
+},
+    "173": {
+    "basicTripInfo": {
+        "cityId": 1,
+        "routeId": 155,
+        "routeName": "Междугородный а/в - пос. Березовка",
+        "routeNumber": "173",
+        "carrierId": 63,
+        "carrierName": "ООО Контур",
+        "vehicleId": "34ad1ed9-ddca-438c-820b-9ba2c06085d2",
+        "vehicleGovNumber": "а299нм124",
+        "vehicleTypeId": 1,
+        "vehicleTypeName": "Автобус",
+        "isRouteSuburban": false
+    },
+    "tariffs": [
+        {
+            "tariffId": 782451,
+            "tariffTypeId": 1,
+            "tariffTypeName": "Полный",
+            "tariffValueCent": 3500,
+            "benefitValueCent": 0,
+            "from": {
+                "id": 1,
+                "name": "По городу"
+            },
+            "to": {
+                "id": 1,
+                "name": "По городу"
+            }
+        }
+    ]
+},
+    "22": {
+    "basicTripInfo": {
+        "cityId": 1,
+        "routeId": 185,
+        "routeName": "ЖК \"Ясный\"-пос. Индустриальный",
+        "routeNumber": "22",
+        "carrierId": 9,
+        "carrierName": "КПАТП-7",
+        "vehicleId": "dd185075-5bc1-43da-ba14-37db2438666e",
+        "vehicleGovNumber": "а323ое124",
+        "vehicleTypeId": 1,
+        "vehicleTypeName": "Автобус",
+        "isRouteSuburban": false
+    },
+    "tariffs": [
+        {
+            "tariffId": 782451,
+            "tariffTypeId": 1,
+            "tariffTypeName": "Полный",
+            "tariffValueCent": 3500,
+            "benefitValueCent": 0,
+            "from": {
+                "id": 1,
+                "name": "По городу"
+            },
+            "to": {
+                "id": 1,
+                "name": "По городу"
+            }
+        }
+    ]
+},
+    "18": {
+    "basicTripInfo": {
+        "cityId": 1,
+        "routeId": 50,
+        "routeName": "КПАТП №7-мкрн. Верхние Черемушки",
+        "routeNumber": "18",
+        "carrierId": 9,
+        "carrierName": "КПАТП-7",
+        "vehicleId": "f3f78ba0-3bee-4245-834a-85c0d8fcc2e5",
+        "vehicleGovNumber": "о789та124",
+        "vehicleTypeId": 1,
+        "vehicleTypeName": "Автобус",
+        "isRouteSuburban": false
+    },
+    "tariffs": [
+        {
+            "tariffId": 782451,
+            "tariffTypeId": 1,
+            "tariffTypeName": "Полный",
+            "tariffValueCent": 3500,
+            "benefitValueCent": 0,
+            "from": {
+                "id": 1,
+                "name": "По городу"
+            },
+            "to": {
+                "id": 1,
+                "name": "По городу"
+            }
+        }
+    ]
+},
+    "80": {
+    "basicTripInfo": {
+        "cityId": 1,
+        "routeId": 174,
+        "routeName": "пос.Таймыр-мкрн. Тихие Зори",
+        "routeNumber": "80",
+        "carrierId": 76,
+        "carrierName": "ИП Долгушин Д.Г.",
+        "vehicleId": "2695c7bb-5eb4-4dde-a681-8f1b12df398a",
+        "vehicleGovNumber": "х322ор124",
+        "vehicleTypeId": 1,
+        "vehicleTypeName": "Автобус",
+        "isRouteSuburban": false
+    },
+    "tariffs": [
+        {
+            "tariffId": 782451,
+            "tariffTypeId": 1,
+            "tariffTypeName": "Полный",
+            "tariffValueCent": 3500,
+            "benefitValueCent": 0,
+            "from": {
+                "id": 1,
+                "name": "По городу"
+            },
+            "to": {
+                "id": 1,
+                "name": "По городу"
+            }
+        }
+    ]
+},
+    "94": {
+    "basicTripInfo": {
+        "cityId": 1,
+        "routeId": 147,
+        "routeName": "ЛДК - ТЭЦ-3",
+        "routeNumber": "94",
+        "carrierId": 82,
+        "carrierName": "ИП Карасева Н. Н.",
+        "vehicleId": "da987d4f-ae98-41e7-b795-992bef9b1bc3",
+        "vehicleGovNumber": "т977оо124",
+        "vehicleTypeId": 1,
+        "vehicleTypeName": "Автобус",
+        "isRouteSuburban": false
+    },
+    "tariffs": [
+        {
+            "tariffId": 782451,
+            "tariffTypeId": 1,
+            "tariffTypeName": "Полный",
+            "tariffValueCent": 3500,
+            "benefitValueCent": 0,
+            "from": {
+                "id": 1,
+                "name": "По городу"
+            },
+            "to": {
+                "id": 1,
+                "name": "По городу"
+            }
+        }
+    ]
+}
+    
 }
