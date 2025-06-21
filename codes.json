@@ -1663,7 +1663,167 @@
         }
     ]
 },
-    "21с": {
+    "99стк": {
+    "basicTripInfo": {
+        "cityId": 1,
+        "routeId": 43,
+        "routeName": "Северный-Цимлянская",
+        "routeNumber": "99",
+        "carrierId": 48,
+        "carrierName": "ООО \"СТК\"",
+        "vehicleId": "b50e4f84-782a-4050-bf9d-6262d81fbc89",
+        "vehicleGovNumber": "о368оу124",
+        "vehicleTypeId": 1,
+        "vehicleTypeName": "Автобус",
+        "isRouteSuburban": false
+    },
+    "tariffs": [
+        {
+            "tariffId": 782451,
+            "tariffTypeId": 1,
+            "tariffTypeName": "Полный",
+            "tariffValueCent": 3500,
+            "benefitValueCent": 0,
+            "from": {
+                "id": 1,
+                "name": "По городу"
+            },
+            "to": {
+                "id": 1,
+                "name": "По городу"
+            }
+        }
+    ]
+}, 
+   "99п": {
+      "basicTripInfo": {
+        "carrierId": 136,
+        "carrierName": "ИП Патрин Н. Н.",
+        "cityId": 1,
+        "isRouteSuburban": false,
+        "routeId": 43,
+        "routeName": "Северный-Цимлянская",
+        "routeNumber": "99",
+        "vehicleGovNumber": "х609мв124",
+        "vehicleId": "a5c2aba7-8659-4f22-808c-d02ed9cec601",
+        "vehicleTypeId": 1,
+        "vehicleTypeName": "Автобус"
+      },
+      "tariffs": [
+        {
+          "benefitValueCent": 0,
+          "from": {
+            "id": 1,
+            "name": "По городу"
+          },
+          "tariffId": 782451,
+          "tariffTypeId": 1,
+          "tariffTypeName": "Полный",
+          "tariffValueCent": 3500,
+          "to": {
+            "id": 1,
+            "name": "По городу"
+          }
+        }
+      ]
+    },
+  "85скад": {
+    "basicTripInfo": {
+        "cityId": 1,
+        "routeId": 44,
+        "routeName": "Даурская - Сельхозкомплекс",
+        "routeNumber": "85",
+        "carrierId": 134,
+        "carrierName": "ООО \"СКАД\"",
+        "vehicleId": "c0c55ea8-9a54-4075-ba64-18ea5be92582",
+        "vehicleGovNumber": "а609ув124",
+        "vehicleTypeId": 1,
+        "vehicleTypeName": "Автобус",
+        "isRouteSuburban": false
+    },
+    "tariffs": [
+        {
+            "tariffId": 782451,
+            "tariffTypeId": 1,
+            "tariffTypeName": "Полный",
+            "tariffValueCent": 3500,
+            "benefitValueCent": 0,
+            "from": {
+                "id": 1,
+                "name": "По городу"
+            },
+            "to": {
+                "id": 1,
+                "name": "По городу"
+            }
+        }
+    ]
+},
+  "85стк": {
+    "basicTripInfo": {
+        "cityId": 1,
+        "routeId": 44,
+        "routeName": "Даурская - Сельхозкомплекс",
+        "routeNumber": "85",
+        "carrierId": 48,
+        "carrierName": "ООО \"СТК\"",
+        "vehicleId": "f6f60b4e-c372-4de7-b10c-e16f3832fede",
+        "vehicleGovNumber": "н792рн124",
+        "vehicleTypeId": 1,
+        "vehicleTypeName": "Автобус",
+        "isRouteSuburban": false
+    },
+    "tariffs": [
+        {
+            "tariffId": 782451,
+            "tariffTypeId": 1,
+            "tariffTypeName": "Полный",
+            "tariffValueCent": 3500,
+            "benefitValueCent": 0,
+            "from": {
+                "id": 1,
+                "name": "По городу"
+            },
+            "to": {
+                "id": 1,
+                "name": "По городу"
+            }
+        }
+    ]
+},
+  "69": {
+    "basicTripInfo": {
+        "cityId": 1,
+        "routeId": 698,
+        "routeName": "мкрн. Солнечный - пос. Индустриальный",
+        "routeNumber": "69",
+        "carrierId": 9,
+        "carrierName": "КПАТП-7",
+        "vehicleId": "166f6a85-1e3c-44a4-940b-ca08829f5971",
+        "vehicleGovNumber": "а330ое124",
+        "vehicleTypeId": 1,
+        "vehicleTypeName": "Автобус",
+        "isRouteSuburban": false
+    },
+    "tariffs": [
+        {
+            "tariffId": 782451,
+            "tariffTypeId": 1,
+            "tariffTypeName": "Полный",
+            "tariffValueCent": 3500,
+            "benefitValueCent": 0,
+            "from": {
+                "id": 1,
+                "name": "По городу"
+            },
+            "to": {
+                "id": 1,
+                "name": "По городу"
+            }
+        }
+    ]
+},
+  "94к": {
     "basicTripInfo": {
         "cityId": 1,
         "routeId": 147,
@@ -1694,7 +1854,104 @@
             }
         }
     ]
+},
+  "94п": {
+    "basicTripInfo": {
+        "cityId": 1,
+        "routeId": 147,
+        "routeName": "ЛДК - ТЭЦ-3",
+        "routeNumber": "94",
+        "carrierId": 51,
+        "carrierName": "ООО Практик",
+        "vehicleId": "25192744-e081-423f-857f-9d3a422d3e2d",
+        "vehicleGovNumber": "н079ок124",
+        "vehicleTypeId": 1,
+        "vehicleTypeName": "Автобус",
+        "isRouteSuburban": false
+    },
+    "tariffs": [
+        {
+            "tariffId": 782451,
+            "tariffTypeId": 1,
+            "tariffTypeName": "Полный",
+            "tariffValueCent": 3500,
+            "benefitValueCent": 0,
+            "from": {
+                "id": 1,
+                "name": "По городу"
+            },
+            "to": {
+                "id": 1,
+                "name": "По городу"
+            }
+        }
+    ]
+},
+  "23": {
+    "basicTripInfo": {
+        "cityId": 1,
+        "routeId": 164,
+        "routeName": "ЛДК - Солнечный (60-летия СССР)",
+        "routeNumber": "23",
+        "carrierId": 67,
+        "carrierName": "ООО Ветеран",
+        "vehicleId": "bd399ece-ae92-412b-b8b6-256305da748c",
+        "vehicleGovNumber": "в498он124",
+        "vehicleTypeId": 1,
+        "vehicleTypeName": "Автобус",
+        "isRouteSuburban": false
+    },
+    "tariffs": [
+        {
+            "tariffId": 782451,
+            "tariffTypeId": 1,
+            "tariffTypeName": "Полный",
+            "tariffValueCent": 3500,
+            "benefitValueCent": 0,
+            "from": {
+                "id": 1,
+                "name": "По городу"
+            },
+            "to": {
+                "id": 1,
+                "name": "По городу"
+            }
+        }
+    ]
+},
+  "1": {
+    "basicTripInfo": {
+        "cityId": 1,
+        "routeId": 491,
+        "routeName": "мкрн. Северный - мкрн. Тихие зори",
+        "routeNumber": "1",
+        "carrierId": 11,
+        "carrierName": "МП Городской транспорт",
+        "vehicleId": "27cc8e63-8605-4ed8-be75-71e6c2a431e1",
+        "vehicleGovNumber": "т577то124",
+        "vehicleTypeId": 5,
+        "vehicleTypeName": "Автобус",
+        "isRouteSuburban": false
+    },
+    "tariffs": [
+        {
+            "tariffId": 782456,
+            "tariffTypeId": 1,
+            "tariffTypeName": "Полный",
+            "tariffValueCent": 3100,
+            "benefitValueCent": 0,
+            "from": {
+                "id": 1,
+                "name": "По городу"
+            },
+            "to": {
+                "id": 1,
+                "name": "По городу"
+            }
+        }
+    ]
 }
+  
 
     
 }
