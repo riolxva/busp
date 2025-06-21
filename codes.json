@@ -1662,6 +1662,39 @@
             }
         }
     ]
+},
+    "21": {
+    "basicTripInfo": {
+        "cityId": 1,
+        "routeId": 147,
+        "routeName": "ЛДК - ТЭЦ-3",
+        "routeNumber": "94",
+        "carrierId": 82,
+        "carrierName": "ИП Карасева Н. Н.",
+        "vehicleId": "da987d4f-ae98-41e7-b795-992bef9b1bc3",
+        "vehicleGovNumber": "т977оо124",
+        "vehicleTypeId": 1,
+        "vehicleTypeName": "Автобус",
+        "isRouteSuburban": false
+    },
+    "tariffs": [
+        {
+            "tariffId": 782451,
+            "tariffTypeId": 1,
+            "tariffTypeName": "Полный",
+            "tariffValueCent": 3500,
+            "benefitValueCent": 0,
+            "from": {
+                "id": 1,
+                "name": "По городу"
+            },
+            "to": {
+                "id": 1,
+                "name": "По городу"
+            }
+        }
+    ]
 }
+
     
 }
