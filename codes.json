@@ -255,7 +255,7 @@
         }
       ]
     },
-    "21": {
+    "21п": {
       "basicTripInfo": {
         "carrierId": 136,
         "carrierName": "ИП Патрин Н. Н.",
@@ -1939,6 +1939,134 @@
             "tariffTypeId": 1,
             "tariffTypeName": "Полный",
             "tariffValueCent": 3100,
+            "benefitValueCent": 0,
+            "from": {
+                "id": 1,
+                "name": "По городу"
+            },
+            "to": {
+                "id": 1,
+                "name": "По городу"
+            }
+        }
+    ]
+},
+    "95": {
+    "basicTripInfo": {
+        "cityId": 1,
+        "routeId": 62,
+        "routeName": "Верхние Черемушки-ЛДК",
+        "routeNumber": "95",
+        "carrierId": 9,
+        "carrierName": "КПАТП-7",
+        "vehicleId": "4913350f-3621-494c-8493-100bfbdf3936",
+        "vehicleGovNumber": "к657ро124",
+        "vehicleTypeId": 1,
+        "vehicleTypeName": "Автобус",
+        "isRouteSuburban": false
+    },
+    "tariffs": [
+        {
+            "tariffId": 782451,
+            "tariffTypeId": 1,
+            "tariffTypeName": "Полный",
+            "tariffValueCent": 3500,
+            "benefitValueCent": 0,
+            "from": {
+                "id": 1,
+                "name": "По городу"
+            },
+            "to": {
+                "id": 1,
+                "name": "По городу"
+            }
+        }
+    ]
+},
+    "67": {
+    "basicTripInfo": {
+        "cityId": 1,
+        "routeId": 164,
+        "routeName": "ЛДК - Солнечный (60-летия СССР)",
+        "routeNumber": "23",
+        "carrierId": 67,
+        "carrierName": "ООО Ветеран",
+        "vehicleId": "d3bb104e-9052-40ec-a3e5-93cf6c20ca1b",
+        "vehicleGovNumber": "в479он124",
+        "vehicleTypeId": 1,
+        "vehicleTypeName": "Автобус",
+        "isRouteSuburban": false
+    },
+    "tariffs": [
+        {
+            "tariffId": 782451,
+            "tariffTypeId": 1,
+            "tariffTypeName": "Полный",
+            "tariffValueCent": 3500,
+            "benefitValueCent": 0,
+            "from": {
+                "id": 1,
+                "name": "По городу"
+            },
+            "to": {
+                "id": 1,
+                "name": "По городу"
+            }
+        }
+    ]
+},
+    "21": {
+    "basicTripInfo": {
+        "cityId": 1,
+        "routeId": 283,
+        "routeName": "Парк \"Прищепка\" - Спортзал",
+        "routeNumber": "21",
+        "carrierId": 48,
+        "carrierName": "ООО \"СТК\"",
+        "vehicleId": "6e75cb85-2e1c-444d-bf60-cce79f20d4dd",
+        "vehicleGovNumber": "к218ру124",
+        "vehicleTypeId": 1,
+        "vehicleTypeName": "Автобус",
+        "isRouteSuburban": false
+    },
+    "tariffs": [
+        {
+            "tariffId": 782451,
+            "tariffTypeId": 1,
+            "tariffTypeName": "Полный",
+            "tariffValueCent": 3500,
+            "benefitValueCent": 0,
+            "from": {
+                "id": 1,
+                "name": "По городу"
+            },
+            "to": {
+                "id": 1,
+                "name": "По городу"
+            }
+        }
+    ]
+},
+     "21стк": {
+    "basicTripInfo": {
+        "cityId": 1,
+        "routeId": 283,
+        "routeName": "Парк \"Прищепка\" - Спортзал",
+        "routeNumber": "21",
+        "carrierId": 48,
+        "carrierName": "ООО \"СТК\"",
+        "vehicleId": "6e75cb85-2e1c-444d-bf60-cce79f20d4dd",
+        "vehicleGovNumber": "к218ру124",
+        "vehicleTypeId": 1,
+        "vehicleTypeName": "Автобус",
+        "isRouteSuburban": false
+    },
+    "tariffs": [
+        {
+            "tariffId": 782451,
+            "tariffTypeId": 1,
+            "tariffTypeName": "Полный",
+            "tariffValueCent": 3500,
             "benefitValueCent": 0,
             "from": {
                 "id": 1,
