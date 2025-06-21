@@ -1983,38 +1983,6 @@
         }
     ]
 },
-    "67": {
-    "basicTripInfo": {
-        "cityId": 1,
-        "routeId": 164,
-        "routeName": "ЛДК - Солнечный (60-летия СССР)",
-        "routeNumber": "23",
-        "carrierId": 67,
-        "carrierName": "ООО Ветеран",
-        "vehicleId": "d3bb104e-9052-40ec-a3e5-93cf6c20ca1b",
-        "vehicleGovNumber": "в479он124",
-        "vehicleTypeId": 1,
-        "vehicleTypeName": "Автобус",
-        "isRouteSuburban": false
-    },
-    "tariffs": [
-        {
-            "tariffId": 782451,
-            "tariffTypeId": 1,
-            "tariffTypeName": "Полный",
-            "tariffValueCent": 3500,
-            "benefitValueCent": 0,
-            "from": {
-                "id": 1,
-                "name": "По городу"
-            },
-            "to": {
-                "id": 1,
-                "name": "По городу"
-            }
-        }
-    ]
-},
     "21": {
     "basicTripInfo": {
         "cityId": 1,
